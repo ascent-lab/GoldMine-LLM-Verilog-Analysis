@@ -1,0 +1,9 @@
+a	sum_comp
+a	sum
+a	overflow
+b	sum_comp
+b	sum
+b	overflow
+sum	s
+sum	overflow
+sum_comp	s

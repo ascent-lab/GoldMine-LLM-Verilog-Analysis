@@ -1,0 +1,45 @@
+strict digraph "" {
+	"[3]in"	[complexity=11,
+		importance=22.4484843755,
+		rank=2.04077130686];
+	"[3]next_state"	[complexity=9,
+		importance=4.46666656946,
+		rank=0.496296285495];
+	"[3]in" -> "[3]next_state";
+	"[1]next_state"	[complexity=5,
+		importance=0.769696943603,
+		rank=0.153939388721];
+	present_state	[complexity=3,
+		importance=0.472727595611,
+		rank=0.157575865204];
+	"[1]next_state" -> present_state;
+	"[3]present_state"	[complexity=11,
+		importance=22.6545453508,
+		rank=2.0595041228];
+	"[3]present_state" -> "[3]next_state";
+	"[1]present_state"	[complexity=7,
+		importance=4.16969722147,
+		rank=0.595671031638];
+	"[1]present_state" -> "[1]next_state";
+	"[1]in"	[complexity=7,
+		importance=3.96363624621,
+		rank=0.566233749459];
+	"[1]in" -> "[1]next_state";
+	"[3]next_state" -> "[1]present_state";
+	out	[complexity=0,
+		importance=0.151515092157,
+		rank=0.0];
+	present_state -> out;
+	in	[complexity=3,
+		importance=0.266666620356,
+		rank=0.0888888734519];
+	in -> out;
+	"[1]reset"	[complexity=4,
+		importance=1.06060671942,
+		rank=0.265151679855];
+	"[1]reset" -> present_state;
+	"[3]reset"	[complexity=8,
+		importance=8.45454597113,
+		rank=1.05681824639];
+	"[3]reset" -> "[1]present_state";
+}

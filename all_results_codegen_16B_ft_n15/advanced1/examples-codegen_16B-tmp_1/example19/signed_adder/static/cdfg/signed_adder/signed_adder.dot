@@ -1,0 +1,33 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"23:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7ff8d0466190>",
+		def_var="['overflow']",
+		fillcolor=deepskyblue,
+		label="23:AS
+overflow = (s == 0)? overflow_adder : 1'bz;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['s', 'overflow_adder']"];
+	"18:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7ff8d0463510>",
+		def_var="['overflow_adder']",
+		fillcolor=deepskyblue,
+		label="18:AS
+overflow_adder = a[0] ^ ~b[0];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'b']"];
+	"18:AS" -> "23:AS";
+	"22:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7ff8d04713d0>",
+		def_var="['s']",
+		fillcolor=deepskyblue,
+		label="22:AS
+s = (overflow_adder == 1)? a + b : ~a + b + 1;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['overflow_adder', 'a', 'b', 'a', 'b']"];
+	"18:AS" -> "22:AS";
+	"22:AS" -> "23:AS";
+}

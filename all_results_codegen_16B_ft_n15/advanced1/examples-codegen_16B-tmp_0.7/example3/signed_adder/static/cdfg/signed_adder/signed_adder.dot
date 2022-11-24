@@ -1,0 +1,62 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"32:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f6d5bb06550>",
+		def_var="['overflow']",
+		fillcolor=deepskyblue,
+		label="32:AS
+overflow = (a[7] == b[7]) && (a[7] != sum[7]);",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'b', 'a', 'sum']"];
+	"16:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f6d5ba96c10>",
+		def_var="['sum']",
+		fillcolor=deepskyblue,
+		label="16:AS
+sum = a + b;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'b']"];
+	"16:AS" -> "32:AS";
+	"23:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f6d5bafd710>",
+		def_var="['s']",
+		fillcolor=deepskyblue,
+		label="23:AS
+s[0] = sum[0];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['sum']"];
+	"16:AS" -> "23:AS";
+	"29:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f6d5bb60dd0>",
+		def_var="['s']",
+		fillcolor=deepskyblue,
+		label="29:AS
+s[7] = sum[7] | sum_comp[7];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['sum', 'sum_comp']"];
+	"16:AS" -> "29:AS";
+	"26:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f6d5bae6b10>",
+		def_var="['s']",
+		fillcolor=deepskyblue,
+		label="26:AS
+s[7:1] = sum[7:1];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['sum']"];
+	"16:AS" -> "26:AS";
+	"19:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f6d5ba8eed0>",
+		def_var="['sum_comp']",
+		fillcolor=deepskyblue,
+		label="19:AS
+sum_comp = ~(a + b);",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'b']"];
+	"19:AS" -> "29:AS";
+}

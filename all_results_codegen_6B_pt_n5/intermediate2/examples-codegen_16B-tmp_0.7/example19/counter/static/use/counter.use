@@ -1,0 +1,12 @@
+{'q': {'DefVars': [None, None, None, None],
+       'Lines': ['12:C', '12:C', '12:C', '12:C'],
+       'Sensitivities': [['reset', 'q'],
+                         ['reset', 'q'],
+                         ['reset', 'q'],
+                         ['reset', 'q']]},
+ 'reset': {'DefVars': [None, None, None, None],
+           'Lines': ['12:C', '12:C', '12:C', '12:C'],
+           'Sensitivities': [['reset', 'q'],
+                             ['reset', 'q'],
+                             ['reset', 'q'],
+                             ['reset', 'q']]}}

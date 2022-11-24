@@ -1,0 +1,63 @@
+strict digraph "" {
+	node [label="\N"];
+	"16:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f7aae4ae510>",
+		fillcolor=springgreen,
+		label="16:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"17:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f7aae4ae690>",
+		fillcolor=firebrick,
+		label="17:NS
+q <= q + 1;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f7aae4ae690>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"16:IF" -> "17:NS"	[cond="['slowena', 'reset', 'q']",
+		label="(slowena & (reset == 1) & (q < 9))",
+		lineno=16];
+	"Leaf_12:AL"	[def_var="['q']",
+		label="Leaf_12:AL"];
+	"17:NS" -> "Leaf_12:AL"	[cond="[]",
+		lineno=None];
+	"14:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f7aae4aeb10>",
+		fillcolor=springgreen,
+		label="14:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"14:IF" -> "16:IF"	[cond="['slowena', 'reset']",
+		label="!(((slowena == 1) && (reset == 1)))",
+		lineno=14];
+	"14:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f7aae4aeb50>",
+		fillcolor=firebrick,
+		label="14:NS
+q <= 0;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f7aae4aeb50>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"14:IF" -> "14:NS"	[cond="['slowena', 'reset']",
+		label="((slowena == 1) && (reset == 1))",
+		lineno=14];
+	"12:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f7aae4aead0>",
+		fillcolor=turquoise,
+		label="12:BL",
+		statements="[]",
+		style=filled,
+		typ=Block];
+	"12:BL" -> "14:IF"	[cond="[]",
+		lineno=None];
+	"12:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f7aae4aee90>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="12:AL",
+		sens="['clk']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['reset', 'q', 'slowena']"];
+	"12:AL" -> "12:BL"	[cond="[]",
+		lineno=None];
+	"14:NS" -> "Leaf_12:AL"	[cond="[]",
+		lineno=None];
+}

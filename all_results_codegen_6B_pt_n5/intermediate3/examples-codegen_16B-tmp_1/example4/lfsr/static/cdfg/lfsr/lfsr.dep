@@ -1,0 +1,5 @@
+17:AL	17:BL
+17:BL	Leaf_17:AL
+Leaf_17:AL	15:AS
+Leaf_17:AL	20:AS
+15:AS	17:AL

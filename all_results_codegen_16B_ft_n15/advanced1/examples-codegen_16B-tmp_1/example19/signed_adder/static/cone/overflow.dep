@@ -1,0 +1,7 @@
+a	s
+a	overflow_adder
+b	s
+b	overflow_adder
+s	overflow
+overflow_adder	overflow
+overflow_adder	s

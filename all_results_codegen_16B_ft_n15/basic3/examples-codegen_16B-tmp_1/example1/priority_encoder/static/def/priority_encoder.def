@@ -1,0 +1,12 @@
+{'pos': {'CDeps': [[[], [], ['in'], []],
+                   [[], [], ['in'], []],
+                   [[], [], ['in'], []]],
+         'CLines': [[None, None, '8:C', None],
+                    [None, None, '8:C', None],
+                    [None, None, '8:C', None]],
+         'Clocked': False,
+         'DDeps': [[], [], []],
+         'DLines': ['11:D', '10:D', '13:D'],
+         'Expressions': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fcacfe63510>,
+                         <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fcacfbd6850>,
+                         <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fcacfbce2d0>]}}

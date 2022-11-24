@@ -1,0 +1,12 @@
+{'q': {'CDeps': [],
+       'CLines': [],
+       'Clocked': False,
+       'DDeps': [['r_reg']],
+       'DLines': ['16:D'],
+       'Expressions': [<pyverilog.vparser.ast.Assign object at 0x7fb8ce4ce290>]},
+ 'r_next': {'CDeps': [],
+            'CLines': [],
+            'Clocked': False,
+            'DDeps': [['reset', 'feedback_value', 'r_reg']],
+            'DLines': ['15:D'],
+            'Expressions': [<pyverilog.vparser.ast.Assign object at 0x7fb8ce5243d0>]}}

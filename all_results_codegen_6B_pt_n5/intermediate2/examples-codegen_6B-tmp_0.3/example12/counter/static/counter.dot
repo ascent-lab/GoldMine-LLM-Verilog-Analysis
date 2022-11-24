@@ -1,0 +1,4 @@
+digraph "" {
+	reset -> q	[weight=1.0];
+	q -> q	[weight=1.0];
+}

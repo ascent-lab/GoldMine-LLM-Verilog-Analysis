@@ -1,0 +1,12 @@
+9:BS	Leaf_6:AL
+10:BS	Leaf_6:AL
+7:BS	Leaf_6:AL
+8:BS	Leaf_6:AL
+9:IF	9:BS
+9:IF	10:BS
+6:AL	6:BL
+6:BL	7:IF
+7:IF	7:BS
+7:IF	8:IF
+8:IF	8:BS
+8:IF	9:IF

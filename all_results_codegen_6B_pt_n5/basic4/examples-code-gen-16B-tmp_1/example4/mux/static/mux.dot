@@ -1,0 +1,8 @@
+strict digraph "" {
+	a -> c	[weight=5.0];
+	c -> out	[weight=1.0];
+	b -> snot	[weight=5.0];
+	snot -> out	[weight=1.0];
+	sel -> c	[weight=5.0];
+	sel -> snot	[weight=5.0];
+}

@@ -1,0 +1,9 @@
+load	q	6.0
+load	temp	4.0
+ena	q	5.0
+ena	temp	4.0
+temp	q	1.0
+q	q	1.0
+q	temp	4.0
+amount	temp	4.0
+data	q	1.0

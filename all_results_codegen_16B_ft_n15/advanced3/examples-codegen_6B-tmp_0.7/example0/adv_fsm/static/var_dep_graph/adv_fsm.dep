@@ -1,0 +1,6 @@
+reset	present_state
+x	z
+x	next_state
+present_state	z
+present_state	next_state
+next_state	present_state

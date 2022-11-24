@@ -1,0 +1,4 @@
+strict digraph "" {
+	reset -> q	[weight=1.0];
+	slowena;
+}

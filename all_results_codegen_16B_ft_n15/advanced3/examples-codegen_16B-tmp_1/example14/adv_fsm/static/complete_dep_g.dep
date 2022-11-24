@@ -1,0 +1,4 @@
+reset	present_state	9.0
+x	present_state	8.0
+present_state	z	1.0
+present_state	present_state	8.0

@@ -1,0 +1,3 @@
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/counter/counter_bench.v:19: error: Could not find variable ``rst'' in ``counter_bench''
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/counter/counter_bench.v:21: error: Could not find variable ``rst'' in ``counter_bench''
+2 error(s) during elaboration.

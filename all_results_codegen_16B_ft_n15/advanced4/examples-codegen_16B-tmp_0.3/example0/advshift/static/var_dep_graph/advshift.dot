@@ -1,0 +1,7 @@
+digraph "" {
+	q -> q	[weight=8.0];
+	load -> q	[weight=9.0];
+	amount -> q	[weight=17.0];
+	data -> q	[weight=1.0];
+	ena -> q	[weight=8.0];
+}

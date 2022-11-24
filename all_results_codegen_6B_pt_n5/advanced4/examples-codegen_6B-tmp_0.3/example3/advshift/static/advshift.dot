@@ -1,0 +1,6 @@
+strict digraph "" {
+	load -> q	[weight=1.0];
+	ena -> q	[weight=2.0];
+	amount -> q	[weight=1.0];
+	data -> q	[weight=3.0];
+}

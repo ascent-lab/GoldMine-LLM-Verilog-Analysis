@@ -1,0 +1,8 @@
+a	carry
+a	sum
+b	carry
+b	sum
+sum	overflow
+sum	s
+carry	overflow
+carry	s

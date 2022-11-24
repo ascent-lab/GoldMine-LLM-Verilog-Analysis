@@ -1,0 +1,30 @@
+digraph "" {
+	"[2]reset"	[complexity=7,
+		importance=9.25,
+		rank=1.32142857143];
+	q	[complexity=6,
+		importance=3.0,
+		rank=0.5];
+	"[2]reset" -> q;
+	"[1]q"	[complexity=9,
+		importance=9.75,
+		rank=1.08333333333];
+	"[1]q" -> q;
+	"[3]q"	[complexity=15,
+		importance=90.75,
+		rank=6.05];
+	"[2]q"	[complexity=12,
+		importance=30.0,
+		rank=2.5];
+	"[3]q" -> "[2]q";
+	"[2]q" -> "[1]q";
+	q -> q;
+	"[1]reset"	[complexity=7,
+		importance=9.25,
+		rank=1.32142857143];
+	"[1]reset" -> q;
+	"[3]reset"	[complexity=10,
+		importance=29.5,
+		rank=2.95];
+	"[3]reset" -> "[1]q";
+}

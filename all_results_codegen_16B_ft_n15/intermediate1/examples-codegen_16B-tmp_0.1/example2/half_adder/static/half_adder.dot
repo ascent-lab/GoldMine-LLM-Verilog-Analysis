@@ -1,0 +1,6 @@
+strict digraph "" {
+	a -> sum	[weight=1.0];
+	a -> cout	[weight=1.0];
+	b -> sum	[weight=1.0];
+	b -> cout	[weight=1.0];
+}

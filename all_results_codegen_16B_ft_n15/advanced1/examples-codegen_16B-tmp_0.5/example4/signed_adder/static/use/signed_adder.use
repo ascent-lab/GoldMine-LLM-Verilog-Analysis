@@ -1,0 +1,12 @@
+{'a': {'DefVars': ['s', 'overflow', 'overflow'],
+       'Lines': ['15:D', '16:D', '16:D'],
+       'Sensitivities': [<pyverilog.vparser.ast.Assign object at 0x7f18d6316950>,
+                         <pyverilog.vparser.ast.Assign object at 0x7f18d630ec10>,
+                         <pyverilog.vparser.ast.Assign object at 0x7f18d630ec10>]},
+ 'b': {'DefVars': ['s', 'overflow'],
+       'Lines': ['15:D', '16:D'],
+       'Sensitivities': [<pyverilog.vparser.ast.Assign object at 0x7f18d6316950>,
+                         <pyverilog.vparser.ast.Assign object at 0x7f18d630ec10>]},
+ 's': {'DefVars': ['overflow'],
+       'Lines': ['16:D'],
+       'Sensitivities': [<pyverilog.vparser.ast.Assign object at 0x7f18d630ec10>]}}

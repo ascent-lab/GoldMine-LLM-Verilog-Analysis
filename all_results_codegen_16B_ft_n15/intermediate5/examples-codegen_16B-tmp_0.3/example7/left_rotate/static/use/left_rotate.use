@@ -1,0 +1,12 @@
+{'data': {'DefVars': ['out', 'out', 'out', 'out'],
+          'Lines': ['15:D', '17:D', '17:D', '18:D'],
+          'Sensitivities': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f1dc85bd6d0>,
+                            <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f1dc85a6f50>,
+                            <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f1dc85a6f50>,
+                            <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f1dc88607d0>]},
+ 'load': {'DefVars': [None, None],
+          'Lines': ['14:C', '14:C'],
+          'Sensitivities': [['load'], ['load']]},
+ 'reset': {'DefVars': [None, None, None],
+           'Lines': ['12:C', '12:C', '12:C'],
+           'Sensitivities': [['reset'], ['reset'], ['reset']]}}

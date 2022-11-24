@@ -1,0 +1,3 @@
+#!/bin/bash
+
+iverilog -g2001 -osimv -s signed_adder_bench /home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/signed_adder/signed_adder_bench.v /home/debjitjdv/Work/NYU/LLM-Verilog-Synthesis/evaluation/all_results_codegen_16B_ft_n15/advanced1/examples-code-gen-16B-tmp_1/example4.v 

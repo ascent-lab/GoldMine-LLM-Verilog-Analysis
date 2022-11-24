@@ -1,0 +1,23 @@
+strict digraph "" {
+	a	[complexity=10,
+		importance=1.05999989151,
+		rank=0.105999989151];
+	sum_comp	[complexity=3,
+		importance=0.420000034399,
+		rank=0.140000011466];
+	a -> sum_comp;
+	sum	[complexity=7,
+		importance=0.939999976185,
+		rank=0.134285710884];
+	a -> sum;
+	s	[complexity=0,
+		importance=0.259999970893,
+		rank=0.0];
+	sum_comp -> s;
+	b	[complexity=10,
+		importance=1.05999989151,
+		rank=0.105999989151];
+	b -> sum_comp;
+	b -> sum;
+	sum -> s;
+}

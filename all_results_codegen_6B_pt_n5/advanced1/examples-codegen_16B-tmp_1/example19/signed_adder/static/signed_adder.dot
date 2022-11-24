@@ -1,0 +1,9 @@
+strict digraph "" {
+	a -> s	[weight=1.0];
+	a -> overflow_adder	[weight=1.0];
+	s -> overflow	[weight=1.0];
+	b -> s	[weight=1.0];
+	b -> overflow_adder	[weight=1.0];
+	overflow_adder -> s	[weight=1.0];
+	overflow_adder -> overflow	[weight=1.0];
+}

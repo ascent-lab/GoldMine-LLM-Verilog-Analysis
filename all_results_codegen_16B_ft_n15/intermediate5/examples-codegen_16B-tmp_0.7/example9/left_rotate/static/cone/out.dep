@@ -1,0 +1,17 @@
+[2]reset	out
+[1]out	out
+[1]load	out
+[2]data	out
+[3]data	[1]out
+[1]data	out
+[3]amount	[2]out
+[3]load	[1]out
+amount	out
+[2]out	[1]out
+[2]load	out
+[1]amount	out
+[2]amount	[1]out
+[1]reset	out
+[3]out	[2]out
+[3]reset	[1]out
+out	out

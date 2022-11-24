@@ -1,0 +1,9 @@
+{'a': {'DefVars': ['out'],
+       'Lines': ['13:D'],
+       'Sensitivities': [<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f897a74ee90>]},
+ 'b': {'DefVars': ['out'],
+       'Lines': ['16:D'],
+       'Sensitivities': [<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f897a7b1550>]},
+ 'sel': {'DefVars': [None, None],
+         'Lines': ['12:C', '12:C'],
+         'Sensitivities': [['sel'], ['sel']]}}

@@ -1,0 +1,8 @@
+{'data': {'DefVars': ['q', 'q'],
+          'Lines': ['21:D', '25:D'],
+          'Sensitivities': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fc0b7723e10>,
+                            <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fc0b7731550>]},
+ 'ena': {'DefVars': [None, None],
+         'Lines': ['20:C', '20:C'],
+         'Sensitivities': [['ena'], ['ena']]},
+ 'load': {'DefVars': [None], 'Lines': ['24:C'], 'Sensitivities': [['load']]}}

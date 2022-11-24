@@ -1,0 +1,8 @@
+strict digraph "" {
+	reset -> present_state	[weight=2.0];
+	present_state -> out	[weight=1.0];
+	present_state -> d0	[weight=1.0];
+	present_state -> next_state	[weight=4.0];
+	in -> next_state	[weight=4.0];
+	next_state -> present_state	[weight=1.0];
+}

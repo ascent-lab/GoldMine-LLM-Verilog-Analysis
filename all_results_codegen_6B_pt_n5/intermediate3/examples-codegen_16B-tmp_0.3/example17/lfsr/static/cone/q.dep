@@ -1,0 +1,7 @@
+[2]reset	[1]r_reg
+[1]r_reg	r_reg
+[2]r_reg	[1]r_reg
+[3]r_reg	[2]r_reg
+r_reg	q
+[1]reset	r_reg
+[3]reset	[2]r_reg

@@ -1,0 +1,12 @@
+{'cout': {'CDeps': [],
+          'CLines': [],
+          'Clocked': False,
+          'DDeps': [['a', 'b']],
+          'DLines': ['9:D'],
+          'Expressions': [<pyverilog.vparser.ast.Assign object at 0x7fceb82f5e10>]},
+ 'sum': {'CDeps': [],
+         'CLines': [],
+         'Clocked': False,
+         'DDeps': [['a', 'b']],
+         'DLines': ['10:D'],
+         'Expressions': [<pyverilog.vparser.ast.Assign object at 0x7fceb7fd6810>]}}

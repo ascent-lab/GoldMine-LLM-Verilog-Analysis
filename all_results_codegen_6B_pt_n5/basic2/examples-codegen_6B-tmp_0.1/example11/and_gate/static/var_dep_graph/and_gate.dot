@@ -1,0 +1,4 @@
+strict digraph "" {
+	a -> out	[weight=1.0];
+	b -> out	[weight=1.0];
+}

@@ -1,0 +1,12 @@
+strict digraph "" {
+	node [label="\N"];
+	"26:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f6d5b771fd0>",
+		def_var="['s']",
+		fillcolor=deepskyblue,
+		label="26:AS
+s[7:1] = sum[7:1];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['sum']"];
+}

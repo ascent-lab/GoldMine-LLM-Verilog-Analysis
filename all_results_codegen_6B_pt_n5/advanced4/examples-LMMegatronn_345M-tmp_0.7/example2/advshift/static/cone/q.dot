@@ -1,0 +1,13 @@
+strict digraph "" {
+	q	[complexity=0,
+		importance=0.499999686387,
+		rank=0.0];
+	"[1]load"	[complexity=1,
+		importance=0.749999843194,
+		rank=0.749999843194];
+	"[1]load" -> q;
+	"[1]data"	[complexity=2,
+		importance=0.749999843194,
+		rank=0.374999921597];
+	"[1]data" -> q;
+}

@@ -1,0 +1,10 @@
+{'a': {'DefVars': ['sum', 'sum', 'cout'],
+       'Lines': ['20:D', '20:D', '21:D'],
+       'Sensitivities': [<pyverilog.vparser.ast.BlockingSubstitution object at 0x7fbf2c0e3d10>,
+                         <pyverilog.vparser.ast.BlockingSubstitution object at 0x7fbf2c0e3d10>,
+                         <pyverilog.vparser.ast.BlockingSubstitution object at 0x7fbf2c0e3890>]},
+ 'b': {'DefVars': ['sum', 'sum', 'cout'],
+       'Lines': ['20:D', '20:D', '21:D'],
+       'Sensitivities': [<pyverilog.vparser.ast.BlockingSubstitution object at 0x7fbf2c0e3d10>,
+                         <pyverilog.vparser.ast.BlockingSubstitution object at 0x7fbf2c0e3d10>,
+                         <pyverilog.vparser.ast.BlockingSubstitution object at 0x7fbf2c0e3890>]}}

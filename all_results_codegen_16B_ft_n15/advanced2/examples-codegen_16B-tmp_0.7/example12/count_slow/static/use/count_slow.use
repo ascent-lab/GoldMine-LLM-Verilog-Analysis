@@ -1,0 +1,10 @@
+{'q': {'DefVars': ['q', None],
+       'Lines': ['19:D', '18:C'],
+       'Sensitivities': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f6aa2e4ebd0>,
+                         ['slowena', 'q']]},
+ 'reset': {'DefVars': [None, None],
+           'Lines': ['13:C', '13:C'],
+           'Sensitivities': [['reset'], ['reset']]},
+ 'slowena': {'DefVars': [None],
+             'Lines': ['18:C'],
+             'Sensitivities': [['slowena', 'q']]}}

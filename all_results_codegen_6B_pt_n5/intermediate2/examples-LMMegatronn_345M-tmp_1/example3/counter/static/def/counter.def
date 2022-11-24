@@ -1,0 +1,13 @@
+{'incr': {'CDeps': [[[], [], ['reset'], ['clk']], [[], [], ['reset']]],
+          'CLines': [[None, None, '14:C', '18:C'], [None, None, '14:C']],
+          'Clocked': True,
+          'DDeps': [['incr'], []],
+          'DLines': ['18:D', '15:D'],
+          'Expressions': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f54da4b2550>,
+                          <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f54da4a4110>]},
+ 'q': {'CDeps': [[[], [], ['reset']]],
+       'CLines': [[None, None, '14:C']],
+       'Clocked': True,
+       'DDeps': [[]],
+       'DLines': ['16:D'],
+       'Expressions': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f54da4a4e10>]}}

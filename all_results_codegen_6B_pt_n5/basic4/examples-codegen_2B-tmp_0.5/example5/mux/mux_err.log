@@ -1,0 +1,5 @@
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/mux/mux_bench.v:20: error: Could not find variable ``clk'' in ``mux_bench''
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/mux/mux_bench.v:21: error: Could not find variable ``rst'' in ``mux_bench''
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/mux/mux_bench.v:23: error: Could not find variable ``rst'' in ``mux_bench''
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/mux/mux_bench.v:28: error: Could not find variable ``clk'' in ``mux_bench''
+4 error(s) during elaboration.

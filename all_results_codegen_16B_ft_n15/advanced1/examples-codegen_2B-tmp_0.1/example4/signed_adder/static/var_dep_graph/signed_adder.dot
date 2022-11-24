@@ -1,0 +1,10 @@
+strict digraph "" {
+	a -> sum	[weight=1.0];
+	a -> carry	[weight=1.0];
+	b -> sum	[weight=1.0];
+	b -> carry	[weight=1.0];
+	sum -> s	[weight=1.0];
+	sum -> overflow	[weight=1.0];
+	carry -> s	[weight=1.0];
+	carry -> overflow	[weight=1.0];
+}

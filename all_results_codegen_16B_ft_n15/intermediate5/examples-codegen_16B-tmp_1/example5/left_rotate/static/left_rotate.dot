@@ -1,0 +1,9 @@
+digraph "" {
+	reset -> out_next	[weight=3.0];
+	reset -> out	[weight=3.0];
+	data -> out	[weight=1.0];
+	out_next -> out_next	[weight=3.0];
+	out_next -> out	[weight=1.0];
+	load -> out_next	[weight=2.0];
+	load -> out	[weight=2.0];
+}

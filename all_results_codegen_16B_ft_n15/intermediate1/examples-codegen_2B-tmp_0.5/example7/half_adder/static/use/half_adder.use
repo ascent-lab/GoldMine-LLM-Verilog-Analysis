@@ -1,0 +1,12 @@
+{'a': {'DefVars': ['sum', 'cout', 'cout', 'cout'],
+       'Lines': ['6:D', '7:D', '7:D', '7:D'],
+       'Sensitivities': [<pyverilog.vparser.ast.Assign object at 0x7f7a71d35f10>,
+                         <pyverilog.vparser.ast.Assign object at 0x7f7a71ca3110>,
+                         <pyverilog.vparser.ast.Assign object at 0x7f7a71ca3110>,
+                         <pyverilog.vparser.ast.Assign object at 0x7f7a71ca3110>]},
+ 'b': {'DefVars': ['sum', 'cout', 'cout', 'cout'],
+       'Lines': ['6:D', '7:D', '7:D', '7:D'],
+       'Sensitivities': [<pyverilog.vparser.ast.Assign object at 0x7f7a71d35f10>,
+                         <pyverilog.vparser.ast.Assign object at 0x7f7a71ca3110>,
+                         <pyverilog.vparser.ast.Assign object at 0x7f7a71ca3110>,
+                         <pyverilog.vparser.ast.Assign object at 0x7f7a71ca3110>]}}

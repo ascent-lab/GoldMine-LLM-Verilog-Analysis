@@ -1,0 +1,6 @@
+a	s	1.0
+a	overflow	1.0
+s	overflow	1.0
+b_s	s	1.0
+b	overflow	1.0
+b	b_s	1.0

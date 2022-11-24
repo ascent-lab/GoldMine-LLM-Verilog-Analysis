@@ -1,0 +1,7 @@
+reset	out_next
+reset	out
+data	out
+out_next	out_next
+out_next	out
+load	out_next
+load	out

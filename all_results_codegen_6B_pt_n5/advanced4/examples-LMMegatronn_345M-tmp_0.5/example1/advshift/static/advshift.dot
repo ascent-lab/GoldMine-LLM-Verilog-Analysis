@@ -1,0 +1,3 @@
+strict digraph "" {
+	data -> q	[weight=1.0];
+}

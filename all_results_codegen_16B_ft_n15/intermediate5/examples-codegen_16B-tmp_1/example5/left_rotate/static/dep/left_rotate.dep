@@ -1,0 +1,7 @@
+reset	out_next	3.0
+reset	out	3.0
+data	out	1.0
+out_next	out_next	3.0
+out_next	out	1.0
+load	out_next	2.0
+load	out	2.0

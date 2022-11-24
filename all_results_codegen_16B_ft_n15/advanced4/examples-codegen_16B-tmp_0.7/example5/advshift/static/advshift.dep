@@ -1,0 +1,9 @@
+load	q
+load	temp
+ena	q
+ena	temp
+temp	q
+q	q
+q	temp
+amount	temp
+data	q

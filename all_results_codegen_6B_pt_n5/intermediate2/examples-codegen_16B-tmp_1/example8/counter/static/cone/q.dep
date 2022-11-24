@@ -1,0 +1,7 @@
+reset	q
+[2]reset	[2]q
+[1]q	q
+[3]q	[2]q
+[2]q	[1]q
+[1]reset	[1]q
+[3]reset	[3]q

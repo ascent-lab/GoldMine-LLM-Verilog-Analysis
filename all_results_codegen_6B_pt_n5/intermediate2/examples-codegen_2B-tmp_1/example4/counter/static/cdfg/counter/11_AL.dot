@@ -1,0 +1,75 @@
+strict digraph "" {
+	node [label="\N"];
+	"15:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f3a7b3b1890>",
+		fillcolor=springgreen,
+		label="15:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"15:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f3a7b3b1910>",
+		fillcolor=turquoise,
+		label="15:BL
+q <= 4'd1;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f3a7b3b1950>]",
+		style=filled,
+		typ=Block];
+	"15:IF" -> "15:BL"	[cond="['q']",
+		label="(q == 4'd12)",
+		lineno=15];
+	"18:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f3a7b3b17d0>",
+		fillcolor=turquoise,
+		label="18:BL
+q <= q + 1'b1;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f3a7b3b1510>]",
+		style=filled,
+		typ=Block];
+	"15:IF" -> "18:BL"	[cond="['q']",
+		label="!((q == 4'd12))",
+		lineno=15];
+	"12:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f3a7b3b1810>",
+		fillcolor=springgreen,
+		label="12:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"12:IF" -> "15:IF"	[cond="['reset']",
+		label="!((reset == 1))",
+		lineno=12];
+	"12:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f3a7b3b1b50>",
+		fillcolor=turquoise,
+		label="12:BL
+q <= 4'd1;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f3a7b3b1b90>]",
+		style=filled,
+		typ=Block];
+	"12:IF" -> "12:BL"	[cond="['reset']",
+		label="(reset == 1)",
+		lineno=12];
+	"Leaf_11:AL"	[def_var="['q']",
+		label="Leaf_11:AL"];
+	"15:BL" -> "Leaf_11:AL"	[cond="[]",
+		lineno=None];
+	"11:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f3a7b3b1dd0>",
+		fillcolor=turquoise,
+		label="11:BL",
+		statements="[]",
+		style=filled,
+		typ=Block];
+	"11:BL" -> "12:IF"	[cond="[]",
+		lineno=None];
+	"18:BL" -> "Leaf_11:AL"	[cond="[]",
+		lineno=None];
+	"12:BL" -> "Leaf_11:AL"	[cond="[]",
+		lineno=None];
+	"11:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f3a7b3b1e50>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="11:AL",
+		sens="['clk']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['reset', 'q']"];
+	"11:AL" -> "11:BL"	[cond="[]",
+		lineno=None];
+}

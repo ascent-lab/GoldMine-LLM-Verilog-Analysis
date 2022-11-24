@@ -1,0 +1,8 @@
+[1]out	[1]present_state
+[2]present_state	[1]out
+[3]present_state	[2]out
+[1]present_state	out
+[2]out	[2]present_state
+present_state	out
+[3]out	[3]present_state
+out	present_state

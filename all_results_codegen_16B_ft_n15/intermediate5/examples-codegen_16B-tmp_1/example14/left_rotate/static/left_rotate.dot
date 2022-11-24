@@ -1,0 +1,5 @@
+strict digraph "" {
+	reset -> out	[weight=3.0];
+	load -> out	[weight=1.0];
+	data -> out	[weight=3.0];
+}

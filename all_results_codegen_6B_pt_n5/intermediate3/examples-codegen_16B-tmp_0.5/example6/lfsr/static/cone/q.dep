@@ -1,0 +1,3 @@
+r_next	q
+r_reg	r_next
+reset	r_next

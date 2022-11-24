@@ -1,0 +1,74 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"31:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f8a29d98a50>",
+		def_var="['overflow']",
+		fillcolor=deepskyblue,
+		label="31:AS
+overflow = overflow_a | overflow_b;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['overflow_a', 'overflow_b']"];
+	"28:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f8a29d98810>",
+		def_var="['overflow_a']",
+		fillcolor=deepskyblue,
+		label="28:AS
+overflow_a = a_b[7] ^ b_a[7];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a_b', 'b_a']"];
+	"28:AS" -> "31:AS";
+	"23:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f8a2a1260d0>",
+		def_var="['b_a']",
+		fillcolor=deepskyblue,
+		label="23:AS
+b_a = { 1'b0, b[7:1] };",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['b']"];
+	"23:AS" -> "28:AS";
+	"25:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f8a2d5a51d0>",
+		def_var="['s_a']",
+		fillcolor=deepskyblue,
+		label="25:AS
+s_a = a_b + b_a;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a_b', 'b_a']"];
+	"23:AS" -> "25:AS";
+	"29:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f8a29d98d90>",
+		def_var="['overflow_b']",
+		fillcolor=deepskyblue,
+		label="29:AS
+overflow_b = s_a[7] ^ s_b[7];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['s_a', 's_b']"];
+	"29:AS" -> "31:AS";
+	"26:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f8a2a1aa190>",
+		def_var="['s']",
+		fillcolor=deepskyblue,
+		label="26:AS
+s = s_a[7:0];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['s_a']"];
+	"25:AS" -> "29:AS";
+	"25:AS" -> "26:AS";
+	"22:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f8a2a13d710>",
+		def_var="['a_b']",
+		fillcolor=deepskyblue,
+		label="22:AS
+a_b = { 1'b0, a[7:1] };",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a']"];
+	"22:AS" -> "28:AS";
+	"22:AS" -> "25:AS";
+}

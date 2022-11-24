@@ -1,0 +1,6 @@
+25:AL	25:BL
+Leaf_25:AL	16:AS
+Leaf_25:AL	15:AS
+Leaf_25:AL	17:AS
+25:BL	Leaf_25:AL
+15:AS	25:AL

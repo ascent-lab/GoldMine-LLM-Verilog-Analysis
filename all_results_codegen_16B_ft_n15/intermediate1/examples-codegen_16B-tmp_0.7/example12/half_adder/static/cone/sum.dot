@@ -1,0 +1,13 @@
+strict digraph "" {
+	a	[complexity=5,
+		importance=0.5,
+		rank=0.1];
+	sum	[complexity=0,
+		importance=0.300000190735,
+		rank=0.0];
+	a -> sum;
+	b	[complexity=5,
+		importance=0.5,
+		rank=0.1];
+	b -> sum;
+}

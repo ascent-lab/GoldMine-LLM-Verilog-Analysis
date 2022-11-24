@@ -1,0 +1,9 @@
+{'r_next': {'DefVars': ['r_reg'],
+            'Lines': ['20:D'],
+            'Sensitivities': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f29a47b1390>]},
+ 'r_reg': {'DefVars': ['q'],
+           'Lines': ['15:D'],
+           'Sensitivities': [<pyverilog.vparser.ast.Assign object at 0x7f29a4756750>]},
+ 'reset': {'DefVars': [None, None],
+           'Lines': ['17:C', '17:C'],
+           'Sensitivities': [['reset'], ['reset']]}}

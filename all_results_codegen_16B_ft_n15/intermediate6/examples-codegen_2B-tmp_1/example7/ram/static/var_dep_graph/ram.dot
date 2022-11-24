@@ -1,0 +1,5 @@
+strict digraph "" {
+	ram -> q	[weight=1.0];
+	data -> ram	[weight=2.0];
+	addr -> q	[weight=1.0];
+}

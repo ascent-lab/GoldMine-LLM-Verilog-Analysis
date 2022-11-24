@@ -1,0 +1,7 @@
+digraph "" {
+	reset -> next_state	[weight=2.0];
+	out -> present_state	[weight=3.0];
+	out -> next_state	[weight=3.0];
+	present_state -> out	[weight=1.0];
+	next_state -> next_state	[weight=1.0];
+}

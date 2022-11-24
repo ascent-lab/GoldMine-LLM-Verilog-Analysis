@@ -1,0 +1,10 @@
+a	s	1.0
+a	s_iter	1.0
+a	overflow	1.0
+a	s_fract_o	1.0
+b	s	1.0
+b	s_iter	1.0
+b	overflow	1.0
+b	s_fract_o	1.0
+s_iter	overflow	1.0
+s_fract_o	overflow	1.0

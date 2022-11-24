@@ -1,0 +1,63 @@
+strict digraph "" {
+	node [label="\N"];
+	"15:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7fba98fa8150>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="15:AL",
+		sens="['clk']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['reset', 'r_next', 'r_reg', 'feedback_value']"];
+	"16:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7fba98fa8250>",
+		fillcolor=turquoise,
+		label="16:BL",
+		statements="[]",
+		style=filled,
+		typ=Block];
+	"15:AL" -> "16:BL"	[cond="[]",
+		lineno=None];
+	"Leaf_15:AL"	[def_var="['r_reg', 'r_next', 'q', 'feedback_value']",
+		label="Leaf_15:AL"];
+	"24:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7fba98fa8310>",
+		fillcolor=turquoise,
+		label="24:BL
+r_reg <= r_next;
+feedback_value <= r_reg[3] ^ r_reg[2];
+r_next <= r_reg[3] ^ r_reg[2] ^ r_reg[1] ^ r_reg[0];
+q <= (feedback_\
+value << 4) | r_next[5:0];",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fba98fa8350>, <pyverilog.vparser.ast.NonblockingSubstitution object \
+at 0x7fba98fa84d0>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fba98fa87d0>, <pyverilog.vparser.ast.NonblockingSubstitution \
+object at 0x7fba98fa8c90>]",
+		style=filled,
+		typ=Block];
+	"24:BL" -> "Leaf_15:AL"	[cond="[]",
+		lineno=None];
+	"17:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7fba98fa8290>",
+		fillcolor=springgreen,
+		label="17:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"17:IF" -> "24:BL"	[cond="['reset']",
+		label="!(reset)",
+		lineno=17];
+	"18:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7fba98fa8fd0>",
+		fillcolor=turquoise,
+		label="18:BL
+r_reg <= 0;
+r_next <= 0;
+feedback_value <= 0;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fba98fb4050>, <pyverilog.vparser.ast.NonblockingSubstitution object \
+at 0x7fba98fb4190>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fba98fb42d0>]",
+		style=filled,
+		typ=Block];
+	"17:IF" -> "18:BL"	[cond="['reset']",
+		label=reset,
+		lineno=17];
+	"18:BL" -> "Leaf_15:AL"	[cond="[]",
+		lineno=None];
+	"16:BL" -> "17:IF"	[cond="[]",
+		lineno=None];
+}

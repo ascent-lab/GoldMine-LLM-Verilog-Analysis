@@ -1,0 +1,9 @@
+[2]reset	[1]r_next
+[2]reset	[1]feedback_value
+[1]feedback_value	q
+[2]r_reg	[1]r_next
+[2]r_reg	[1]feedback_value
+[3]r_next	[2]r_reg
+[1]r_next	q
+[1]reset	q
+[3]reset	[2]r_reg

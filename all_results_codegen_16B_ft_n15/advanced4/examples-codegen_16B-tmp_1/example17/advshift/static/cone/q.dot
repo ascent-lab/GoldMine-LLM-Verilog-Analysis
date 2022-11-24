@@ -1,0 +1,21 @@
+strict digraph "" {
+	q	[complexity=0,
+		importance=0.428570815005,
+		rank=0.0];
+	"[1]amount"	[complexity=1,
+		importance=1.85714055627,
+		rank=1.85714055627];
+	"[1]amount" -> q;
+	"[1]load"	[complexity=2,
+		importance=0.571428111254,
+		rank=0.285714055627];
+	"[1]load" -> q;
+	data	[complexity=10,
+		importance=2.28571137127,
+		rank=0.228571137127];
+	data -> q;
+	"[1]ena"	[complexity=3,
+		importance=2.71428218628,
+		rank=0.904760728759];
+	"[1]ena" -> q;
+}
