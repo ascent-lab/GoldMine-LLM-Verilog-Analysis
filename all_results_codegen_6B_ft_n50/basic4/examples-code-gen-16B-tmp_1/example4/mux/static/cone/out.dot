@@ -1,0 +1,26 @@
+strict digraph "" {
+	a	[complexity=18,
+		importance=2.54053771578,
+		rank=0.14114098421];
+	c	[complexity=3,
+		importance=0.486485905299,
+		rank=0.162161968433];
+	a -> c;
+	out	[complexity=0,
+		importance=0.297296378454,
+		rank=0.0];
+	c -> out;
+	b	[complexity=18,
+		importance=2.54053771578,
+		rank=0.14114098421];
+	snot	[complexity=3,
+		importance=0.486485905299,
+		rank=0.162161968433];
+	b -> snot;
+	snot -> out;
+	sel	[complexity=18,
+		importance=2.54053771578,
+		rank=0.14114098421];
+	sel -> c;
+	sel -> snot;
+}

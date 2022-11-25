@@ -1,0 +1,5 @@
+load	q_temp
+load	q
+q_temp	q
+data	q_temp
+ena	q

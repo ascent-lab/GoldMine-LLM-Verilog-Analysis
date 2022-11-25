@@ -1,0 +1,3 @@
+#!/bin/bash
+
+iverilog -g2001 -osimv -s adv_fsm_bench /home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/adv_fsm/adv_fsm_bench.v /home/debjitjdv/Work/NYU/LLM-Verilog-Synthesis/evaluation/all_results_codegen_6B_pt_n5/advanced3/examples-codegen_16B-tmp_0.1/example4.v 

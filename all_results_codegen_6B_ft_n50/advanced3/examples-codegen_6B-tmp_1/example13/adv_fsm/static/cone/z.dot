@@ -1,0 +1,9 @@
+strict digraph "" {
+	z	[complexity=0,
+		importance=0.210000038147,
+		rank=0.0];
+	present_state	[complexity=3,
+		importance=0.410000085831,
+		rank=0.136666695277];
+	present_state -> z;
+}

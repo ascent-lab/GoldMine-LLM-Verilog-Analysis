@@ -1,0 +1,8 @@
+a	tempB	1.0
+a	tempA	1.0
+tempB	tempS	1.0
+tempA	tempS	1.0
+b	tempB	1.0
+b	tempA	1.0
+tempS	overflow	1.0
+tempS	s	1.0

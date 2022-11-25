@@ -1,0 +1,3 @@
+strict digraph "" {
+	present_state -> z	[weight=1.0];
+}

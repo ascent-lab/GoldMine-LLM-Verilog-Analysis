@@ -1,0 +1,26 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"6:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7faf9ccf50d0>",
+		clk_sens=False,
+		fillcolor=gold,
+		label="6:AL",
+		sens="['a', 'b']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['a', 'b']"];
+	"7:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7faf9cc77090>",
+		fillcolor=turquoise,
+		label="7:BL
+sum = a ^ b;
+cout = a & b;",
+		statements="[<pyverilog.vparser.ast.BlockingSubstitution object at 0x7faf9cc77390>, <pyverilog.vparser.ast.BlockingSubstitution object at 0x7faf9cc63790>]",
+		style=filled,
+		typ=Block];
+	"6:AL" -> "7:BL"	[cond="[]",
+		lineno=None];
+	"Leaf_6:AL"	[def_var="['sum', 'cout']",
+		label="Leaf_6:AL"];
+	"7:BL" -> "Leaf_6:AL"	[cond="[]",
+		lineno=None];
+}

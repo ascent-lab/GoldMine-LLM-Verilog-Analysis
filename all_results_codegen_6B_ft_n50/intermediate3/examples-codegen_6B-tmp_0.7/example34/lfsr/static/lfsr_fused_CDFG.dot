@@ -1,0 +1,22 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"16:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f5183f234d0>",
+		def_var="['r_next']",
+		fillcolor=deepskyblue,
+		label="16:AS
+r_next = { r_reg[2:0], feedback_value };",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg', 'feedback_value']"];
+	"17:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f5183ecebd0>",
+		def_var="['q']",
+		fillcolor=deepskyblue,
+		label="17:AS
+q = (reset == 1'b1)? r_reg : r_next;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['reset', 'r_reg', 'r_next']"];
+	"16:AS" -> "17:AS";
+}

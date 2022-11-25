@@ -1,0 +1,12 @@
+{'overflow': {'CDeps': [],
+              'CLines': [],
+              'Clocked': False,
+              'DDeps': [['a', 'b', 's', 'a', 'b']],
+              'DLines': ['15:D'],
+              'Expressions': [<pyverilog.vparser.ast.Assign object at 0x7fcf4dae38d0>]},
+ 's': {'CDeps': [],
+       'CLines': [],
+       'Clocked': False,
+       'DDeps': [['a', 'b']],
+       'DLines': ['17:D'],
+       'Expressions': [<pyverilog.vparser.ast.Assign object at 0x7fcf4daf1290>]}}

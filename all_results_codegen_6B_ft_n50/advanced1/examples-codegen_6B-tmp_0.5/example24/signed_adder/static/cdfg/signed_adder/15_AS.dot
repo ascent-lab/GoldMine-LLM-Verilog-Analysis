@@ -1,0 +1,12 @@
+strict digraph "" {
+	node [label="\N"];
+	"15:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fe412b3ce90>",
+		def_var="['b_signed']",
+		fillcolor=deepskyblue,
+		label="15:AS
+b_signed = { { 6{ b[7] } }, b };",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['b', 'b']"];
+}

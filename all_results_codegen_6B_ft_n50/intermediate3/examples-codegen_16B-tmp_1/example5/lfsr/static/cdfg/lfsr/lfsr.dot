@@ -1,0 +1,67 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"26:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f9a284a6950>",
+		fillcolor=turquoise,
+		label="26:BL
+r_reg <= r_next;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f9a284a6d10>]",
+		style=filled,
+		typ=Block];
+	"Leaf_19:AL"	[def_var="['r_reg']",
+		label="Leaf_19:AL"];
+	"26:BL" -> "Leaf_19:AL"	[cond="[]",
+		lineno=None];
+	"19:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f9a284bd610>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="19:AL",
+		sens="['clk', 'reset']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['reset', 'r_next']"];
+	"20:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f9a284a6850>",
+		fillcolor=springgreen,
+		label="20:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"19:AL" -> "20:IF"	[cond="[]",
+		lineno=None];
+	"20:IF" -> "26:BL"	[cond="['reset']",
+		label="!(reset)",
+		lineno=20];
+	"21:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f9a284a6e90>",
+		fillcolor=firebrick,
+		label="21:NS
+r_reg <= 5'd1;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f9a284a6e90>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"20:IF" -> "21:NS"	[cond="['reset']",
+		label=reset,
+		lineno=20];
+	"17:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f9a2844e4d0>",
+		def_var="['q']",
+		fillcolor=deepskyblue,
+		label="17:AS
+q = r_reg;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg']"];
+	"Leaf_19:AL" -> "17:AS";
+	"15:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f9a284a3210>",
+		def_var="['r_next']",
+		fillcolor=deepskyblue,
+		label="15:AS
+r_next = (r_reg[2] ^ r_reg[4])? feedback_value : r_reg[4];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg', 'r_reg', 'feedback_value', 'r_reg']"];
+	"Leaf_19:AL" -> "15:AS";
+	"15:AS" -> "19:AL";
+	"21:NS" -> "Leaf_19:AL"	[cond="[]",
+		lineno=None];
+}

@@ -1,0 +1,5 @@
+reset	r_next
+r_reg	r_next
+r_reg	q
+q	r_next
+feedback_value	r_next

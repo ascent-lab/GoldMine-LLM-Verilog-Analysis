@@ -1,0 +1,17 @@
+strict digraph "" {
+	"[1]load"	[complexity=1,
+		importance=1.09090872016,
+		rank=1.09090872016];
+	out	[complexity=0,
+		importance=0.454545232098,
+		rank=0.0];
+	"[1]load" -> out;
+	data	[complexity=7,
+		importance=1.09090872016,
+		rank=0.15584410288];
+	data -> out;
+	amount	[complexity=5,
+		importance=0.636363488065,
+		rank=0.127272697613];
+	amount -> out;
+}

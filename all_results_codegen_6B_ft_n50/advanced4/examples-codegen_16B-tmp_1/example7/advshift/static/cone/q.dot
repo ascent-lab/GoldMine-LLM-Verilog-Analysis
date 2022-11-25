@@ -1,0 +1,91 @@
+digraph "" {
+	"[1]q"	[complexity=9,
+		importance=1.04662991031,
+		rank=0.116292212256];
+	q	[complexity=6,
+		importance=0.697753273538,
+		rank=0.116292212256];
+	"[1]q" -> q;
+	"[2]data"	[complexity=8,
+		importance=0.781086606872,
+		rank=0.097635825859];
+	"[2]data" -> q;
+	"[3]q"	[complexity=23,
+		importance=11.2020629447,
+		rank=0.487046214986];
+	"[3]q" -> "[3]q";
+	"[2]q"	[complexity=20,
+		importance=10.8531863079,
+		rank=0.542659315395];
+	"[3]q" -> "[2]q";
+	"[1]direction"	[complexity=9,
+		importance=1.01554330344,
+		rank=0.112838144826];
+	"[3]q" -> "[1]direction";
+	"[2]ena"	[complexity=12,
+		importance=8.20767976082,
+		rank=0.683973313402];
+	direction	[complexity=9,
+		importance=1.01554330344,
+		rank=0.112838144826];
+	"[2]ena" -> direction;
+	"[2]ena" -> q;
+	"[2]q" -> "[1]q";
+	"[2]q" -> "[2]q";
+	"[2]q" -> direction;
+	"[2]load"	[complexity=11,
+		importance=4.14550654708,
+		rank=0.376864231552];
+	"[2]load" -> direction;
+	"[2]load" -> q;
+	"[3]data"	[complexity=22,
+		importance=10.9365196412,
+		rank=0.497114529147];
+	"[3]data" -> "[1]q";
+	"[3]data" -> "[2]q";
+	direction -> q;
+	"[1]ena"	[complexity=9,
+		importance=7.75861934226,
+		rank=0.862068815806];
+	"[1]ena" -> q;
+	q -> q;
+	"[3]ena"	[complexity=23,
+		importance=119.46838272,
+		rank=5.19427750957];
+	"[3]ena" -> "[1]q";
+	"[3]ena" -> "[2]q";
+	"[3]ena" -> "[1]direction";
+	"[1]load"	[complexity=8,
+		importance=4.26985297456,
+		rank=0.533731621821];
+	"[1]load" -> q;
+	"[2]direction"	[complexity=23,
+		importance=11.1709763378,
+		rank=0.485694623382];
+	"[2]direction" -> "[1]q";
+	"[2]direction" -> "[2]q";
+	"[3]amount"	[complexity=17,
+		importance=10.2387663677,
+		rank=0.60228037457];
+	"[3]amount" -> "[1]direction";
+	"[1]data"	[complexity=8,
+		importance=0.781086606872,
+		rank=0.097635825859];
+	"[1]data" -> q;
+	"[3]load"	[complexity=22,
+		importance=65.2024511807,
+		rank=2.96374778094];
+	"[3]load" -> "[1]q";
+	"[3]load" -> "[2]q";
+	"[3]load" -> "[1]direction";
+	"[2]amount"	[complexity=17,
+		importance=10.2387663677,
+		rank=0.60228037457];
+	"[2]amount" -> direction;
+	"[1]direction" -> q;
+	"[3]direction"	[complexity=23,
+		importance=11.1709763378,
+		rank=0.485694623382];
+	"[3]direction" -> "[3]q";
+	"[3]direction" -> "[2]q";
+}

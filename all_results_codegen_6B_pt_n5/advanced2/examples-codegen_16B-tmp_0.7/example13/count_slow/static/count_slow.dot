@@ -1,0 +1,5 @@
+digraph "" {
+	reset -> q	[weight=4.0];
+	q -> q	[weight=3.0];
+	slowena -> q	[weight=2.0];
+}

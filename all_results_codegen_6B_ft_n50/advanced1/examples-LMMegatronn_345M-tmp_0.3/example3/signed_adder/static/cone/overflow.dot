@@ -1,0 +1,25 @@
+strict digraph "" {
+	a	[complexity=10,
+		importance=0.575757401543,
+		rank=0.0575757401543];
+	overflow	[complexity=0,
+		importance=0.303030058904,
+		rank=0.0];
+	a -> overflow;
+	s_iter	[complexity=7,
+		importance=0.454545314723,
+		rank=0.0649350449604];
+	a -> s_iter;
+	s_fract_o	[complexity=7,
+		importance=0.454545314723,
+		rank=0.0649350449604];
+	a -> s_fract_o;
+	b	[complexity=10,
+		importance=0.575757401543,
+		rank=0.0575757401543];
+	b -> overflow;
+	b -> s_iter;
+	b -> s_fract_o;
+	s_iter -> overflow;
+	s_fract_o -> overflow;
+}

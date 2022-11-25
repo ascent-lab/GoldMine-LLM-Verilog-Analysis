@@ -1,0 +1,25 @@
+strict digraph "" {
+	node [label="\N"];
+	"12:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f51aafc76d0>",
+		fillcolor=firebrick,
+		label="12:NS
+q[3:0] <= q[3:0];",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f51aafc76d0>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"Leaf_11:AL"	[def_var="['q']",
+		label="Leaf_11:AL"];
+	"12:NS" -> "Leaf_11:AL"	[cond="[]",
+		lineno=None];
+	"11:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f51aafc7ad0>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="11:AL",
+		sens="['clk']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['q']"];
+	"11:AL" -> "12:NS"	[cond="[]",
+		lineno=None];
+}

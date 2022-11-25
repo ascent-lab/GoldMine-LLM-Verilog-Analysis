@@ -1,0 +1,10 @@
+strict digraph "" {
+	a -> tempB	[weight=1.0];
+	a -> tempA	[weight=1.0];
+	tempB -> tempS	[weight=1.0];
+	tempA -> tempS	[weight=1.0];
+	b -> tempB	[weight=1.0];
+	b -> tempA	[weight=1.0];
+	tempS -> s	[weight=1.0];
+	tempS -> overflow	[weight=1.0];
+}

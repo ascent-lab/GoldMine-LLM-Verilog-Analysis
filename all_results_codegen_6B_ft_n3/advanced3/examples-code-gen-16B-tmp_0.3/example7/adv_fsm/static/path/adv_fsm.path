@@ -1,0 +1,9 @@
+20:AL-->21:BL-->22:IF-->25:NS-->Leaf_20:AL
+20:AL-->21:BL-->22:IF-->23:NS-->Leaf_20:AL
+28:AL-->29:BL-->30:CS-->41:CA-->42:IF-->45:NS-->Leaf_28:AL
+28:AL-->29:BL-->30:CS-->41:CA-->42:IF-->43:NS-->Leaf_28:AL
+28:AL-->29:BL-->30:CS-->46:CA-->47:NS-->Leaf_28:AL
+28:AL-->29:BL-->30:CS-->31:CA-->32:IF-->33:NS-->Leaf_28:AL
+28:AL-->29:BL-->30:CS-->31:CA-->32:IF-->35:NS-->Leaf_28:AL
+28:AL-->29:BL-->30:CS-->36:CA-->37:IF-->38:NS-->Leaf_28:AL
+28:AL-->29:BL-->30:CS-->36:CA-->37:IF-->40:NS-->Leaf_28:AL

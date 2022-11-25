@@ -1,0 +1,12 @@
+{'out': {'CDeps': [[[], ['reset']],
+                   [[], ['reset'], ['load'], ['amount']],
+                   [[], ['reset'], ['load']]],
+         'CLines': [[None, '11:C'],
+                    [None, '11:C', '14:C', '17:C'],
+                    [None, '11:C', '14:C']],
+         'Clocked': True,
+         'DDeps': [[], ['data'], ['data']],
+         'DLines': ['12:D', '19:D', '15:D'],
+         'Expressions': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fc84aa4e290>,
+                         <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fc84aaa6f50>,
+                         <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fc84aab1050>]}}

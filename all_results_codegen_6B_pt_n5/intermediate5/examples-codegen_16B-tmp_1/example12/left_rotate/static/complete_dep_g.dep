@@ -1,0 +1,5 @@
+load	out	2.0
+reset	out	1.0
+amount	out	1.0
+data	out	2.0
+out	out	1.0

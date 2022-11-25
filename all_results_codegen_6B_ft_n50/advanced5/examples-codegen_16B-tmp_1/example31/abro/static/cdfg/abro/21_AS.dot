@@ -1,0 +1,12 @@
+strict digraph "" {
+	node [label="\N"];
+	"21:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7ff6bfd584d0>",
+		def_var="['z']",
+		fillcolor=deepskyblue,
+		label="21:AS
+z = (cur_state == SAB)? 1 : 0;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['cur_state']"];
+}

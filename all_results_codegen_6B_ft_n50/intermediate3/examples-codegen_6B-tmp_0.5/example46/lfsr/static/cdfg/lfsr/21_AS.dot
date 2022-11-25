@@ -1,0 +1,12 @@
+strict digraph "" {
+	node [label="\N"];
+	"21:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fe43df5a0d0>",
+		def_var="['q']",
+		fillcolor=deepskyblue,
+		label="21:AS
+q = { r_reg[3], r_reg[2], r_reg[1], r_reg[4], r_reg[0] };",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg', 'r_reg', 'r_reg', 'r_reg', 'r_reg']"];
+}

@@ -1,0 +1,13 @@
+[2]reset	[1]r_reg
+[1]q	[1]r_next
+[3]q	[3]r_next
+[1]r_reg	[1]q
+[2]q	[2]r_next
+[3]r_next	[2]r_reg
+[3]r_reg	[3]q
+[1]r_next	r_reg
+[2]r_next	[1]r_reg
+[2]r_reg	[2]q
+r_reg	q
+[1]reset	r_reg
+[3]reset	[2]r_reg

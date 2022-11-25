@@ -1,0 +1,4 @@
+reset	q	1.0
+reset	incr	2.0
+incr	incr	1.0
+clk	incr	1.0

@@ -1,0 +1,4 @@
+{'data': {'DefVars': ['q'],
+          'Lines': ['18:D'],
+          'Sensitivities': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f6867aa3210>]},
+ 'load': {'DefVars': [None], 'Lines': ['18:C'], 'Sensitivities': [['load']]}}

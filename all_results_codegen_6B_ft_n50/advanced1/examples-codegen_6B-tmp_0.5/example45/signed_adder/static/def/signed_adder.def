@@ -1,0 +1,12 @@
+{'b_signed': {'CDeps': [],
+              'CLines': [],
+              'Clocked': False,
+              'DDeps': [['b']],
+              'DLines': ['15:D'],
+              'Expressions': [<pyverilog.vparser.ast.Assign object at 0x7f60d79e37d0>]},
+ 's': {'CDeps': [],
+       'CLines': [],
+       'Clocked': False,
+       'DDeps': [['a', 'b_signed', 'overflow']],
+       'DLines': ['17:D'],
+       'Expressions': [<pyverilog.vparser.ast.Assign object at 0x7f60d798e510>]}}

@@ -1,0 +1,7 @@
+a	tempB
+a	tempA
+tempB	tempS
+tempA	tempS
+b	tempB
+b	tempA
+tempS	overflow

@@ -1,0 +1,86 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"16:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7fcae324e290>",
+		fillcolor=springgreen,
+		label="16:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"18:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7fcae324ee90>",
+		fillcolor=turquoise,
+		label="18:BL
+r_reg <= r_next;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fcae32b1150>]",
+		style=filled,
+		typ=Block];
+	"16:IF" -> "18:BL"	[cond="['reset']",
+		label="!(reset)",
+		lineno=16];
+	"16:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7fcae32a34d0>",
+		fillcolor=turquoise,
+		label="16:BL
+r_reg <= 5'b00000;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fcae32a3ed0>]",
+		style=filled,
+		typ=Block];
+	"16:IF" -> "16:BL"	[cond="['reset']",
+		label=reset,
+		lineno=16];
+	"15:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7fcae32a3d10>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="15:AL",
+		sens="['clk', 'reset']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['reset', 'r_next']"];
+	"15:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7fcae32a3790>",
+		fillcolor=turquoise,
+		label="15:BL",
+		statements="[]",
+		style=filled,
+		typ=Block];
+	"15:AL" -> "15:BL"	[cond="[]",
+		lineno=None];
+	"15:BL" -> "16:IF"	[cond="[]",
+		lineno=None];
+	"Leaf_15:AL"	[def_var="['r_reg']",
+		label="Leaf_15:AL"];
+	"24:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fcae2f18c90>",
+		def_var="['feedback_value']",
+		fillcolor=deepskyblue,
+		label="24:AS
+feedback_value = r_reg[0] ^ r_reg[4];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg', 'r_reg']"];
+	"Leaf_15:AL" -> "24:AS";
+	"23:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fcae332a250>",
+		def_var="['r_next']",
+		fillcolor=deepskyblue,
+		label="23:AS
+r_next = { r_reg[4], r_reg[3], r_reg[2], r_reg[1] };",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg', 'r_reg', 'r_reg', 'r_reg']"];
+	"Leaf_15:AL" -> "23:AS";
+	"22:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fcae32a6d10>",
+		def_var="['q']",
+		fillcolor=deepskyblue,
+		label="22:AS
+q = { r_reg[3], r_reg[2], r_reg[1], r_reg[0], feedback_value };",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg', 'r_reg', 'r_reg', 'r_reg', 'feedback_value']"];
+	"Leaf_15:AL" -> "22:AS";
+	"24:AS" -> "22:AS";
+	"23:AS" -> "15:AL";
+	"18:BL" -> "Leaf_15:AL"	[cond="[]",
+		lineno=None];
+	"16:BL" -> "Leaf_15:AL"	[cond="[]",
+		lineno=None];
+}

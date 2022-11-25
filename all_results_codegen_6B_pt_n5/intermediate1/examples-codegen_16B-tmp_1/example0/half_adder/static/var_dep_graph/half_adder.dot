@@ -1,0 +1,15 @@
+strict digraph "" {
+	a -> sum	[weight=1.0];
+	a -> w	[weight=1.0];
+	b -> y	[weight=1.0];
+	b -> x	[weight=1.0];
+	sum -> cout	[weight=1.0];
+	b_not -> y	[weight=1.0];
+	b_not -> x	[weight=1.0];
+	vdd;
+	w -> cout	[weight=1.0];
+	y -> sum	[weight=1.0];
+	x -> sum	[weight=1.0];
+	x -> w	[weight=1.0];
+	gnd;
+}

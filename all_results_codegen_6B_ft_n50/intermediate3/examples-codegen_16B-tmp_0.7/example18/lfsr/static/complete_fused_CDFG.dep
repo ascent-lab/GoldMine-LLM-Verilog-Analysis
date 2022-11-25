@@ -1,0 +1,5 @@
+16:AL	16:BL
+15:AS	16:AL
+16:BL	Leaf_16:AL
+Leaf_16:AL	19:AS
+Leaf_16:AL	15:AS

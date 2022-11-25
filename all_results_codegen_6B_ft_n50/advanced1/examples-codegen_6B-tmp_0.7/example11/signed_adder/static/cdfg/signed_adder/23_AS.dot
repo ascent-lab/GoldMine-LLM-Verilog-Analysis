@@ -1,0 +1,12 @@
+strict digraph "" {
+	node [label="\N"];
+	"23:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f38b62b4410>",
+		def_var="['overflow_d']",
+		fillcolor=deepskyblue,
+		label="23:AS
+overflow_d = a[7] + b_d[7];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'b_d']"];
+}

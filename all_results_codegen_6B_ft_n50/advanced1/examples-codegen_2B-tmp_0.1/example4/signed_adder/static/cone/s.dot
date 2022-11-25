@@ -1,0 +1,23 @@
+strict digraph "" {
+	carry	[complexity=3,
+		importance=0.382353132987,
+		rank=0.127451044329];
+	s	[complexity=0,
+		importance=0.205882470005,
+		rank=0.0];
+	carry -> s;
+	a	[complexity=6,
+		importance=0.5,
+		rank=0.0833333333333];
+	a -> carry;
+	sum	[complexity=3,
+		importance=0.382353132987,
+		rank=0.127451044329];
+	a -> sum;
+	b	[complexity=6,
+		importance=0.5,
+		rank=0.0833333333333];
+	b -> carry;
+	b -> sum;
+	sum -> s;
+}

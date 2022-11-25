@@ -1,0 +1,88 @@
+strict digraph "" {
+	node [label="\N"];
+	"10:BS"	[ast="<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f26e6099450>",
+		fillcolor=cadetblue,
+		label="10:BS
+pos = 2'd1;",
+		statements="[<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f26e6099450>]",
+		style=filled,
+		typ=BlockingSubstitution];
+	"Leaf_6:AL"	[def_var="['pos']",
+		label="Leaf_6:AL"];
+	"10:BS" -> "Leaf_6:AL"	[cond="[]",
+		lineno=None];
+	"8:BS"	[ast="<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f26e60996d0>",
+		fillcolor=cadetblue,
+		label="8:BS
+pos = 2'd0;",
+		statements="[<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f26e60996d0>]",
+		style=filled,
+		typ=BlockingSubstitution];
+	"8:BS" -> "Leaf_6:AL"	[cond="[]",
+		lineno=None];
+	"9:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f26e6099810>",
+		fillcolor=springgreen,
+		label="9:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"9:IF" -> "10:BS"	[cond="['in']",
+		label="(in == 3'b010)",
+		lineno=9];
+	"11:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f26e6099890>",
+		fillcolor=springgreen,
+		label="11:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"9:IF" -> "11:IF"	[cond="['in']",
+		label="!((in == 3'b010))",
+		lineno=9];
+	"12:BS"	[ast="<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f26e6099a50>",
+		fillcolor=cadetblue,
+		label="12:BS
+pos = 2'd2;",
+		statements="[<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f26e6099a50>]",
+		style=filled,
+		typ=BlockingSubstitution];
+	"12:BS" -> "Leaf_6:AL"	[cond="[]",
+		lineno=None];
+	"6:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f26e6099d10>",
+		clk_sens=False,
+		fillcolor=gold,
+		label="6:AL",
+		sens="[]",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['in']"];
+	"7:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f26e6099dd0>",
+		fillcolor=springgreen,
+		label="7:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"6:AL" -> "7:IF"	[cond="[]",
+		lineno=None];
+	"11:IF" -> "12:BS"	[cond="['in']",
+		label="(in == 3'b100)",
+		lineno=11];
+	"14:BS"	[ast="<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f26e60998d0>",
+		fillcolor=cadetblue,
+		label="14:BS
+pos = 2'd3;",
+		statements="[<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f26e60998d0>]",
+		style=filled,
+		typ=BlockingSubstitution];
+	"11:IF" -> "14:BS"	[cond="['in']",
+		label="!((in == 3'b100))",
+		lineno=11];
+	"14:BS" -> "Leaf_6:AL"	[cond="[]",
+		lineno=None];
+	"7:IF" -> "8:BS"	[cond="['in']",
+		label="(in == 3'b001)",
+		lineno=7];
+	"7:IF" -> "9:IF"	[cond="['in']",
+		label="!((in == 3'b001))",
+		lineno=7];
+}

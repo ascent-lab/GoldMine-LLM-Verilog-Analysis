@@ -1,0 +1,112 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"Leaf_23:AL"	[def_var="['r_reg']",
+		label="Leaf_23:AL"];
+	"18:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f218c926090>",
+		def_var="['r_next']",
+		fillcolor=deepskyblue,
+		label="18:AS
+r_next[0] = r_reg[0] ^ feedback_value & ~(r_reg[4] ^ r_reg[2]);",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg', 'feedback_value', 'r_reg', 'r_reg']"];
+	"Leaf_23:AL" -> "18:AS";
+	"16:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f218c8cee90>",
+		def_var="['feedback_value']",
+		fillcolor=deepskyblue,
+		label="16:AS
+feedback_value = r_reg[2] ^ r_reg[4];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg', 'r_reg']"];
+	"Leaf_23:AL" -> "16:AS";
+	"20:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f218c946510>",
+		def_var="['r_next']",
+		fillcolor=deepskyblue,
+		label="20:AS
+r_next[2] = r_reg[2];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg']"];
+	"Leaf_23:AL" -> "20:AS";
+	"19:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f218c9aa250>",
+		def_var="['r_next']",
+		fillcolor=deepskyblue,
+		label="19:AS
+r_next[1] = r_reg[1];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg']"];
+	"Leaf_23:AL" -> "19:AS";
+	"21:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f218c598350>",
+		def_var="['r_next']",
+		fillcolor=deepskyblue,
+		label="21:AS
+r_next[3] = r_reg[3];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg']"];
+	"Leaf_23:AL" -> "21:AS";
+	"22:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f218c598990>",
+		def_var="['r_next']",
+		fillcolor=deepskyblue,
+		label="22:AS
+r_next[4] = r_reg[4];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg']"];
+	"Leaf_23:AL" -> "22:AS";
+	"15:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f218c8d6750>",
+		def_var="['q']",
+		fillcolor=deepskyblue,
+		label="15:AS
+q = r_reg;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg']"];
+	"Leaf_23:AL" -> "15:AS";
+	"17:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f218c931450>",
+		def_var="['r_next']",
+		fillcolor=deepskyblue,
+		label="17:AS
+r_next = (reset)? 5'b1 : r_reg;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['reset', 'r_reg']"];
+	"Leaf_23:AL" -> "17:AS";
+	"23:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f218c598290>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="23:AL",
+		sens="['clk']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['r_next']"];
+	"18:AS" -> "23:AL";
+	"16:AS" -> "18:AS";
+	"20:AS" -> "23:AL";
+	"19:AS" -> "23:AL";
+	"21:AS" -> "23:AL";
+	"23:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f218c598a50>",
+		fillcolor=turquoise,
+		label="23:BL
+r_reg <= r_next;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f218c598910>]",
+		style=filled,
+		typ=Block];
+	"23:AL" -> "23:BL"	[cond="[]",
+		lineno=None];
+	"22:AS" -> "23:AL";
+	"23:BL" -> "Leaf_23:AL"	[cond="[]",
+		lineno=None];
+	"17:AS" -> "23:AL";
+}

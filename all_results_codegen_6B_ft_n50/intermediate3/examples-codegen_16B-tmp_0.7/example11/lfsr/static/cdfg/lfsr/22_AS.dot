@@ -1,0 +1,12 @@
+strict digraph "" {
+	node [label="\N"];
+	"22:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fcce8be4990>",
+		def_var="['feedback_value']",
+		fillcolor=deepskyblue,
+		label="22:AS
+feedback_value = r_reg & { q[2], q[2] ^ q[1], q[2] ^ q[0] } ^ { q[2], q[2] ^ q[1], q[2] ^ q[0] };",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q']"];
+}

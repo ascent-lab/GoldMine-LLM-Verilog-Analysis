@@ -1,0 +1,60 @@
+strict digraph "" {
+	"[2]reset"	[complexity=13,
+		importance=2.48333509632,
+		rank=0.19102577664];
+	"[1]r_reg"	[complexity=12,
+		importance=1.1833342512,
+		rank=0.0986111876];
+	"[2]reset" -> "[1]r_reg";
+	"[1]feedback_value"	[complexity=9,
+		importance=0.88333340608,
+		rank=0.0981481562311];
+	"[1]r_next"	[complexity=4,
+		importance=0.716666875627,
+		rank=0.179166718907];
+	"[1]feedback_value" -> "[1]r_next";
+	"[1]r_reg" -> "[1]feedback_value";
+	"[1]r_reg" -> "[1]r_next";
+	"[3]feedback_value"	[complexity=29,
+		importance=2.31666715733,
+		rank=0.0798850743908];
+	"[3]r_next"	[complexity=24,
+		importance=2.15000062688,
+		rank=0.0895833594533];
+	"[3]feedback_value" -> "[3]r_next";
+	"[2]r_reg"	[complexity=22,
+		importance=1.90000112683,
+		rank=0.086363687583];
+	"[2]feedback_value"	[complexity=19,
+		importance=1.60000028171,
+		rank=0.0842105411425];
+	"[2]r_reg" -> "[2]feedback_value";
+	"[2]r_next"	[complexity=14,
+		importance=1.43333375125,
+		rank=0.102380982232];
+	"[2]r_reg" -> "[2]r_next";
+	"[3]r_next" -> "[2]r_reg";
+	"[2]feedback_value" -> "[2]r_next";
+	"[3]r_reg"	[complexity=32,
+		importance=2.61666800245,
+		rank=0.0817708750767];
+	"[3]r_reg" -> "[3]feedback_value";
+	"[3]r_reg" -> "[3]r_next";
+	q	[complexity=0,
+		importance=0.166666530453,
+		rank=0.0];
+	r_reg	[complexity=2,
+		importance=0.466667375573,
+		rank=0.233333687787];
+	"[1]r_next" -> r_reg;
+	"[2]r_next" -> "[1]r_reg";
+	r_reg -> q;
+	"[1]reset"	[complexity=3,
+		importance=1.05000134507,
+		rank=0.350000448356];
+	"[1]reset" -> r_reg;
+	"[3]reset"	[complexity=23,
+		importance=3.91666884757,
+		rank=0.170289949894];
+	"[3]reset" -> "[2]r_reg";
+}

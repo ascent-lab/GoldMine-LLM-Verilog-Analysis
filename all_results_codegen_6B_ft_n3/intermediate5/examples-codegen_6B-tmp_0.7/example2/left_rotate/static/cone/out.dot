@@ -1,0 +1,54 @@
+digraph "" {
+	"[2]reset"	[complexity=7,
+		importance=3.875,
+		rank=0.553571428571];
+	out	[complexity=6,
+		importance=1.25,
+		rank=0.208333333333];
+	"[2]reset" -> out;
+	"[1]out"	[complexity=9,
+		importance=1.875,
+		rank=0.208333333333];
+	"[1]out" -> out;
+	"[2]data"	[complexity=8,
+		importance=1.375,
+		rank=0.171875];
+	"[2]data" -> out;
+	"[3]data"	[complexity=11,
+		importance=2.0,
+		rank=0.181818181818];
+	"[3]data" -> "[1]out";
+	"[1]load"	[complexity=4,
+		importance=1.375,
+		rank=0.34375];
+	"[1]load" -> out;
+	"[1]data"	[complexity=5,
+		importance=0.75,
+		rank=0.15];
+	"[1]data" -> out;
+	"[2]out"	[complexity=12,
+		importance=2.5,
+		rank=0.208333333333];
+	"[2]out" -> "[1]out";
+	"[2]load"	[complexity=7,
+		importance=2.625,
+		rank=0.375];
+	"[2]load" -> out;
+	"[3]load"	[complexity=10,
+		importance=3.875,
+		rank=0.3875];
+	"[3]load" -> "[1]out";
+	"[1]reset"	[complexity=4,
+		importance=2.0,
+		rank=0.5];
+	"[1]reset" -> out;
+	"[3]out"	[complexity=15,
+		importance=3.125,
+		rank=0.208333333333];
+	"[3]out" -> "[2]out";
+	"[3]reset"	[complexity=10,
+		importance=5.75,
+		rank=0.575];
+	"[3]reset" -> "[1]out";
+	out -> out;
+}

@@ -1,0 +1,13 @@
+{'present_state': {'CDeps': [[[], ['reset']], [[], ['reset']]],
+                   'CLines': [[None, '20:C'], [None, '20:C']],
+                   'Clocked': True,
+                   'DDeps': [['next_state'], []],
+                   'DLines': ['23:D', '21:D'],
+                   'Expressions': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f6a5ffbdd10>,
+                                   <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f6a5ffb1650>]},
+ 'z': {'CDeps': [],
+       'CLines': [],
+       'Clocked': False,
+       'DDeps': [['present_state', 'S101']],
+       'DLines': ['17:D'],
+       'Expressions': [<pyverilog.vparser.ast.Assign object at 0x7f6a5ffa3210>]}}

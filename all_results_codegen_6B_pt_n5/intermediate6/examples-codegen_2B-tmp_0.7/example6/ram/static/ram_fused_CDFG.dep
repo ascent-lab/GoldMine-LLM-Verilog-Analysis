@@ -1,0 +1,4 @@
+Leaf_12:AL	15:AS
+14:NS	Leaf_12:AL
+13:IF	14:NS
+12:AL	13:IF

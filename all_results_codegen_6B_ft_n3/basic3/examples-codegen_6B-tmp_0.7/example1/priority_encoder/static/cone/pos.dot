@@ -1,0 +1,9 @@
+strict digraph "" {
+	pos	[complexity=0,
+		importance=0.599999904633,
+		rank=0.0];
+	in	[complexity=3,
+		importance=5.79999923706,
+		rank=1.93333307902];
+	in -> pos;
+}

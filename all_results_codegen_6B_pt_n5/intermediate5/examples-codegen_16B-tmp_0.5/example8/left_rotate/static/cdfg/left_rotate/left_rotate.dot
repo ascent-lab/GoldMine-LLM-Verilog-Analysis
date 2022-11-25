@@ -1,0 +1,91 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"10:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f63c97234d0>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="10:AL",
+		sens="['clk']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['load', 'reset', 'data', 'out']"];
+	"11:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f63c9723610>",
+		fillcolor=turquoise,
+		label="11:BL",
+		statements="[]",
+		style=filled,
+		typ=Block];
+	"10:AL" -> "11:BL"	[cond="[]",
+		lineno=None];
+	"12:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f63c96cee90>",
+		fillcolor=springgreen,
+		label="12:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"14:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f63c9731650>",
+		fillcolor=springgreen,
+		label="14:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"12:IF" -> "14:IF"	[cond="['reset']",
+		label="!(reset)",
+		lineno=12];
+	"13:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f63c96ce290>",
+		fillcolor=firebrick,
+		label="13:NS
+out <= 0;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f63c96ce290>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"12:IF" -> "13:NS"	[cond="['reset']",
+		label=reset,
+		lineno=12];
+	"11:BL" -> "12:IF"	[cond="[]",
+		lineno=None];
+	"15:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f63c9731250>",
+		fillcolor=firebrick,
+		label="15:NS
+out <= data;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f63c9731250>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"14:IF" -> "15:NS"	[cond="['load']",
+		label=load,
+		lineno=14];
+	"16:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f63c9398c50>",
+		fillcolor=turquoise,
+		label="16:BL
+out[7] <= out[0];
+out[0] <= out[7];
+out[7] <= out[6];
+out[6] <= out[5];
+out[5] <= out[4];
+out[4] <= out[3];
+out[3] <= out[\
+2];
+out[2] <= out[1];
+out[1] <= out[0];
+out[6:0] <= { out[6:0], out[7] };",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f63c9726950>, <pyverilog.vparser.ast.NonblockingSubstitution object \
+at 0x7f63c9726550>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f63c97aa150>, <pyverilog.vparser.ast.NonblockingSubstitution \
+object at 0x7f63cb2a8ad0>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f63c9398c10>, <pyverilog.vparser.ast.NonblockingSubstitution \
+object at 0x7f63c9398890>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f63c9398390>, <pyverilog.vparser.ast.NonblockingSubstitution \
+object at 0x7f63c9398750>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f63c9398850>, <pyverilog.vparser.ast.NonblockingSubstitution \
+object at 0x7f63c8eb0150>]",
+		style=filled,
+		typ=Block];
+	"14:IF" -> "16:BL"	[cond="['load']",
+		label="!(load)",
+		lineno=14];
+	"Leaf_10:AL"	[def_var="['out']",
+		label="Leaf_10:AL"];
+	"15:NS" -> "Leaf_10:AL"	[cond="[]",
+		lineno=None];
+	"13:NS" -> "Leaf_10:AL"	[cond="[]",
+		lineno=None];
+	"16:BL" -> "Leaf_10:AL"	[cond="[]",
+		lineno=None];
+	"Leaf_10:AL" -> "10:AL";
+}

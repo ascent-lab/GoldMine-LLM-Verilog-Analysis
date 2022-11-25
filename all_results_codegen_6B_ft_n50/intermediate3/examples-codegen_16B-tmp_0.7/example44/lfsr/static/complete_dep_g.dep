@@ -1,0 +1,4 @@
+r_reg	q	1.0
+q	feedback_value	1.0
+feedback_value	r_reg	1.0
+reset	r_reg	2.0

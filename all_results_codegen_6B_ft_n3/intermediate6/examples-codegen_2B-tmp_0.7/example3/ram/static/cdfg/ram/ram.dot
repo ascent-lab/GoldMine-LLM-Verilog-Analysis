@@ -1,0 +1,44 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"15:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fd75fb71450>",
+		def_var="['q']",
+		fillcolor=deepskyblue,
+		label="15:AS
+q = ram[addr];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['ram', 'addr']"];
+	"13:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7fd75fb633d0>",
+		fillcolor=springgreen,
+		label="13:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"14:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fd75fb0e550>",
+		fillcolor=firebrick,
+		label="14:NS
+ram[addr] <= data;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fd75fb0e550>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"13:IF" -> "14:NS"	[cond="['we']",
+		label=we,
+		lineno=13];
+	"12:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7fd75fb634d0>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="12:AL",
+		sens="['clk']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['we', 'data']"];
+	"12:AL" -> "13:IF"	[cond="[]",
+		lineno=None];
+	"Leaf_12:AL"	[def_var="['ram']",
+		label="Leaf_12:AL"];
+	"Leaf_12:AL" -> "15:AS";
+	"14:NS" -> "Leaf_12:AL"	[cond="[]",
+		lineno=None];
+}

@@ -1,0 +1,9 @@
+strict digraph "" {
+	r_reg -> q	[weight=1.0];
+	r_reg -> r_next	[weight=1.0];
+	q -> feedback_value	[weight=1.0];
+	reset -> r_reg	[weight=2.0];
+	reset -> r_next	[weight=1.0];
+	r_next -> r_reg	[weight=1.0];
+	feedback_value -> r_next	[weight=1.0];
+}

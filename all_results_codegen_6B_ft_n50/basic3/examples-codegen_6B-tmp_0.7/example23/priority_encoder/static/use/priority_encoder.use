@@ -1,0 +1,6 @@
+{'in': {'DefVars': [None, None, None, None, None, None],
+        'Lines': ['11:C', '11:C', '12:C', '11:C', '12:C', '13:C'],
+        'Sensitivities': [['in'], ['in'], ['in'], ['in'], ['in'], ['in']]},
+ 'sel': {'DefVars': [None, None, None, None, None],
+         'Lines': ['9:C', '9:C', '9:C', '9:C', '9:C'],
+         'Sensitivities': [['sel'], ['sel'], ['sel'], ['sel'], ['sel']]}}

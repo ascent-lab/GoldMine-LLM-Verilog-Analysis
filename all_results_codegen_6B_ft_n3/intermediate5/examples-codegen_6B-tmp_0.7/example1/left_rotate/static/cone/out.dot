@@ -1,0 +1,65 @@
+strict digraph "" {
+	"[2]reset"	[complexity=33,
+		importance=54.1,
+		rank=1.63939393939];
+	"[1]out"	[complexity=32,
+		importance=5.4,
+		rank=0.16875];
+	"[2]reset" -> "[1]out";
+	out	[complexity=16,
+		importance=0.6,
+		rank=0.0375];
+	"[1]out" -> out;
+	"[2]data"	[complexity=34,
+		importance=5.5,
+		rank=0.161764705882];
+	"[2]data" -> "[1]out";
+	"[3]data"	[complexity=50,
+		importance=43.9,
+		rank=0.878];
+	"[2]out"	[complexity=48,
+		importance=43.8,
+		rank=0.9125];
+	"[3]data" -> "[2]out";
+	"[1]load"	[complexity=17,
+		importance=5.5,
+		rank=0.323529411765];
+	"[1]load" -> out;
+	"[3]amount"	[complexity=49,
+		importance=350.5,
+		rank=7.15306122449];
+	"[3]amount" -> "[2]out";
+	"[3]load"	[complexity=49,
+		importance=394.3,
+		rank=8.04693877551];
+	"[3]load" -> "[2]out";
+	"[1]data"	[complexity=18,
+		importance=0.7,
+		rank=0.0388888888889];
+	"[1]data" -> out;
+	"[2]out" -> "[1]out";
+	"[2]load"	[complexity=33,
+		importance=48.7,
+		rank=1.47575757576];
+	"[2]load" -> "[1]out";
+	"[1]amount"	[complexity=17,
+		importance=4.9,
+		rank=0.288235294118];
+	"[1]amount" -> out;
+	"[2]amount"	[complexity=33,
+		importance=43.3,
+		rank=1.31212121212];
+	"[2]amount" -> "[1]out";
+	"[1]reset"	[complexity=17,
+		importance=6.1,
+		rank=0.358823529412];
+	"[1]reset" -> out;
+	"[3]out"	[complexity=64,
+		importance=351.0,
+		rank=5.484375];
+	"[3]out" -> "[2]out";
+	"[3]reset"	[complexity=49,
+		importance=438.1,
+		rank=8.94081632653];
+	"[3]reset" -> "[2]out";
+}

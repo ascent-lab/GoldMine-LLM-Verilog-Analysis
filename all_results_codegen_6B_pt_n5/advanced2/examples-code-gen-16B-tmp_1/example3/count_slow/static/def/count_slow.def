@@ -1,0 +1,12 @@
+{'q': {'CDeps': [[[], [], ['reset', 'slowena'], [], ['q']],
+                 [[], [], ['reset', 'slowena'], [], ['q']],
+                 [[], [], ['reset', 'slowena']]],
+       'CLines': [[None, None, '15:C', None, '22:C'],
+                  [None, None, '15:C', None, '22:C'],
+                  [None, None, '15:C']],
+       'Clocked': True,
+       'DDeps': [[], ['q'], []],
+       'DLines': ['23:D', '25:D', '16:D'],
+       'Expressions': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f4342071550>,
+                       <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f434207dc50>,
+                       <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f43420633d0>]}}

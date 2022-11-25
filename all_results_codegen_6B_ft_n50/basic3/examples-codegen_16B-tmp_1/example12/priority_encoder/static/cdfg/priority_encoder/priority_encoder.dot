@@ -1,0 +1,27 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"6:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f3f3d72a090>",
+		clk_sens=False,
+		fillcolor=gold,
+		label="6:AL",
+		sens="['in']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['in']"];
+	"7:BS"	[ast="<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f3f3d737210>",
+		fillcolor=cadetblue,
+		label="7:BS
+pos = (in[1])? 2'd3 : 
+      (in[2])? 2'd1 : 
+      (in[0])? 2'd0 : 2'd0;",
+		statements="[<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f3f3d737210>]",
+		style=filled,
+		typ=BlockingSubstitution];
+	"6:AL" -> "7:BS"	[cond="[]",
+		lineno=None];
+	"Leaf_6:AL"	[def_var="['pos']",
+		label="Leaf_6:AL"];
+	"7:BS" -> "Leaf_6:AL"	[cond="[]",
+		lineno=None];
+}

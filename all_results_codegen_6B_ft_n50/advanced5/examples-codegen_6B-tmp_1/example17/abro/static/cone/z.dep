@@ -1,0 +1,10 @@
+[1]cur_state	[1]next_state
+[1]next_state	cur_state
+cur_state	z
+[3]next_state	[1]cur_state
+[2]IDLE	[1]next_state
+[3]cur_state	[3]next_state
+[2]a	[1]next_state
+[1]reset	cur_state
+[3]reset	[1]cur_state
+[2]b	[1]next_state

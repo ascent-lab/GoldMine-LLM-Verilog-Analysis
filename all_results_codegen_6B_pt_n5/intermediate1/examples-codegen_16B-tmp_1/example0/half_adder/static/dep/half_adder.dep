@@ -1,0 +1,11 @@
+a	sum	1.0
+a	w	1.0
+b	y	1.0
+b	x	1.0
+sum	cout	1.0
+b_not	y	1.0
+b_not	x	1.0
+w	cout	1.0
+y	sum	1.0
+x	sum	1.0
+x	w	1.0

@@ -1,0 +1,5 @@
+strict digraph "" {
+	x -> next_state	[weight=8.0];
+	present_state -> z	[weight=1.0];
+	present_state -> next_state	[weight=9.0];
+}

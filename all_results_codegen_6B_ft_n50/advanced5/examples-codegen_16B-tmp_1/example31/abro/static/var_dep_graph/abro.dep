@@ -1,0 +1,8 @@
+reset	cur_state
+a	next_state
+b	next_state
+cur_state	z
+cur_state	next_state
+IDLE	next_state
+SA	next_state
+next_state	cur_state

@@ -1,0 +1,34 @@
+strict digraph "" {
+	node [label="\N"];
+	"Leaf_30:AL"	[def_var="['q_next']",
+		label="Leaf_30:AL"];
+	"31:BS"	[ast="<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f74329743d0>",
+		fillcolor=cadetblue,
+		label="31:BS
+q_next = 4'b0000;",
+		statements="[<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f74329743d0>]",
+		style=filled,
+		typ=BlockingSubstitution];
+	"31:BS" -> "Leaf_30:AL"	[cond="[]",
+		lineno=None];
+	"31:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f7432974590>",
+		fillcolor=springgreen,
+		label="31:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"31:IF" -> "31:BS"	[cond="['q']",
+		label="(q == 4'b0000)",
+		lineno=31];
+	"30:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f7432974690>",
+		clk_sens=False,
+		fillcolor=gold,
+		label="30:AL",
+		sens="['q']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['q']"];
+	"30:AL" -> "31:IF"	[cond="[]",
+		lineno=None];
+}

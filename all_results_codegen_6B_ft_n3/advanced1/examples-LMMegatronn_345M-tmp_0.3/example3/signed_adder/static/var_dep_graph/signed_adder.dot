@@ -1,0 +1,12 @@
+strict digraph "" {
+	a -> s_iter	[weight=1.0];
+	a -> s	[weight=1.0];
+	a -> overflow	[weight=1.0];
+	a -> s_fract_o	[weight=1.0];
+	b -> s_iter	[weight=1.0];
+	b -> s	[weight=1.0];
+	b -> overflow	[weight=1.0];
+	b -> s_fract_o	[weight=1.0];
+	s_iter -> overflow	[weight=1.0];
+	s_fract_o -> overflow	[weight=1.0];
+}

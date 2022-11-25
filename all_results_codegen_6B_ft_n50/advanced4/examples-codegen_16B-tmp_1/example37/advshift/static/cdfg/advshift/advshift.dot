@@ -1,0 +1,69 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"17:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f83d5b371d0>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="17:AL",
+		sens="['clk']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['q', 'ena', 'amount']"];
+	"18:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f83d5b234d0>",
+		fillcolor=turquoise,
+		label="18:BL",
+		statements="[]",
+		style=filled,
+		typ=Block];
+	"17:AL" -> "18:BL"	[cond="[]",
+		lineno=None];
+	"28:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f83d5b31650>",
+		fillcolor=firebrick,
+		label="28:NS
+q[63:8] <= q[55:0];",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f83d5b31650>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"Leaf_17:AL"	[def_var="['q']",
+		label="Leaf_17:AL"];
+	"28:NS" -> "Leaf_17:AL"	[cond="[]",
+		lineno=None];
+	"24:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f83d5b23790>",
+		fillcolor=springgreen,
+		label="24:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"18:BL" -> "24:IF"	[cond="[]",
+		lineno=None];
+	"25:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f83d5798290>",
+		fillcolor=turquoise,
+		label="25:BL
+q[7:0] <= q[63:56];
+q[55:8] <= q[23:0];
+q[23:0] <= q[55:24];
+q[55:24] <= q[31:0];
+q[31:0] <= q[47:24];
+q[47:24] <= q[7:0];",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f83d5b26e90>, <pyverilog.vparser.ast.NonblockingSubstitution object \
+at 0x7f83d5b26290>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f83d5ba0d10>, <pyverilog.vparser.ast.NonblockingSubstitution \
+object at 0x7f83d57983d0>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f83d5798a50>, <pyverilog.vparser.ast.NonblockingSubstitution \
+object at 0x7f83d5798910>]",
+		style=filled,
+		typ=Block];
+	"24:IF" -> "25:BL"	[cond="['ena']",
+		label=ena,
+		lineno=24];
+	"26:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f83d5b31150>",
+		fillcolor=springgreen,
+		label="26:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"26:IF" -> "28:NS"	[cond="['amount']",
+		label="(amount == 2'b11)",
+		lineno=26];
+	"25:BL" -> "26:IF"	[cond="[]",
+		lineno=None];
+	"Leaf_17:AL" -> "17:AL";
+}

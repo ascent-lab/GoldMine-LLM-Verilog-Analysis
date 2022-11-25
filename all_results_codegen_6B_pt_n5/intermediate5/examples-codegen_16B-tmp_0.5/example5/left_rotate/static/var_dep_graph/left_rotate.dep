@@ -1,0 +1,6 @@
+reset	out
+load	out
+clk	out
+amount	out
+data	out
+out	out

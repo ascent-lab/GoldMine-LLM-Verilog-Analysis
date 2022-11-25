@@ -1,0 +1,11 @@
+a	m	1.0
+a	s	1.0
+a	e	1.0
+a	overflow	1.0
+b	m	1.0
+b	s	1.0
+b	e	1.0
+b	overflow	1.0
+e	s	1.0
+e	overflow	1.0
+s	overflow	1.0

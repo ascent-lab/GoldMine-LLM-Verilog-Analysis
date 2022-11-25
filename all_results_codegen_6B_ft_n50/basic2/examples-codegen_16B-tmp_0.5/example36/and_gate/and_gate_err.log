@@ -1,0 +1,5 @@
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/and_gate/and_gate_bench.v:18: error: Could not find variable ``clk'' in ``and_gate_bench''
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/and_gate/and_gate_bench.v:19: error: Could not find variable ``rst'' in ``and_gate_bench''
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/and_gate/and_gate_bench.v:21: error: Could not find variable ``rst'' in ``and_gate_bench''
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/and_gate/and_gate_bench.v:26: error: Could not find variable ``clk'' in ``and_gate_bench''
+4 error(s) during elaboration.

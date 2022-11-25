@@ -1,0 +1,11 @@
+a	a_b
+s_a	s
+s_a	overflow_b
+s_b	overflow_b
+b	b_a
+b_a	s_a
+b_a	overflow_a
+overflow_a	overflow
+overflow_b	overflow
+a_b	s_a
+a_b	overflow_a

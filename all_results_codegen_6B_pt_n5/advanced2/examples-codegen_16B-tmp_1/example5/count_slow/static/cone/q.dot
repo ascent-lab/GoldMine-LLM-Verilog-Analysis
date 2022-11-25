@@ -1,0 +1,41 @@
+strict digraph "" {
+	"[2]reset"	[complexity=13,
+		importance=16.1666666667,
+		rank=1.24358974359];
+	"[1]q"	[complexity=12,
+		importance=4.0,
+		rank=0.333333333333];
+	"[2]reset" -> "[1]q";
+	q	[complexity=6,
+		importance=0.666666666667,
+		rank=0.111111111111];
+	"[1]q" -> q;
+	"[3]q"	[complexity=24,
+		importance=104.0,
+		rank=4.33333333333];
+	"[2]q"	[complexity=18,
+		importance=20.6666666667,
+		rank=1.14814814815];
+	"[3]q" -> "[2]q";
+	"[2]slowena"	[complexity=13,
+		importance=12.1666666667,
+		rank=0.935897435897];
+	"[2]slowena" -> "[1]q";
+	"[1]slowena"	[complexity=7,
+		importance=2.16666666667,
+		rank=0.309523809524];
+	"[1]slowena" -> q;
+	"[2]q" -> "[1]q";
+	"[3]slowena"	[complexity=19,
+		importance=62.1666666667,
+		rank=3.27192982456];
+	"[3]slowena" -> "[2]q";
+	"[1]reset"	[complexity=7,
+		importance=2.83333333333,
+		rank=0.404761904762];
+	"[1]reset" -> q;
+	"[3]reset"	[complexity=19,
+		importance=82.8333333333,
+		rank=4.35964912281];
+	"[3]reset" -> "[2]q";
+}

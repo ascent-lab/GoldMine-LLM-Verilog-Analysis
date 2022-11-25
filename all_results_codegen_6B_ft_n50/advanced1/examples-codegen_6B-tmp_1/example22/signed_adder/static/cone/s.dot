@@ -1,0 +1,19 @@
+strict digraph "" {
+	a	[complexity=9,
+		importance=0.826086898101,
+		rank=0.0917874331224];
+	s	[complexity=0,
+		importance=0.391304322751,
+		rank=0.0];
+	a -> s;
+	overflow	[complexity=4,
+		importance=0.652173796203,
+		rank=0.163043449051];
+	a -> overflow;
+	b	[complexity=9,
+		importance=0.826086898101,
+		rank=0.0917874331224];
+	b -> s;
+	b -> overflow;
+	overflow -> s;
+}

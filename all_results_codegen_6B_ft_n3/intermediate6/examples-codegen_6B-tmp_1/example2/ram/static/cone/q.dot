@@ -1,0 +1,21 @@
+strict digraph "" {
+	q	[complexity=0,
+		importance=0.333333096832,
+		rank=0.0];
+	"[1]we"	[complexity=4,
+		importance=0.733332933376,
+		rank=0.183333233344];
+	ram	[complexity=3,
+		importance=0.599999400064,
+		rank=0.199999800021];
+	"[1]we" -> ram;
+	ram -> q;
+	data	[complexity=6,
+		importance=0.733332933376,
+		rank=0.122222155563];
+	data -> ram;
+	addr	[complexity=3,
+		importance=0.466666630144,
+		rank=0.155555543381];
+	addr -> q;
+}

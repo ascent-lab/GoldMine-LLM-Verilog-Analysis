@@ -1,0 +1,101 @@
+strict digraph "" {
+	node [label="\N"];
+	"22:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7fef3a5f48d0>",
+		fillcolor=springgreen,
+		label="22:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"23:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7fef3a5f4a50>",
+		fillcolor=turquoise,
+		label="23:BL",
+		statements="[]",
+		style=filled,
+		typ=Block];
+	"22:IF" -> "23:BL"	[cond="['ena']",
+		label=ena,
+		lineno=22];
+	"19:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7fef3a5f1bd0>",
+		fillcolor=turquoise,
+		label="19:BL",
+		statements="[]",
+		style=filled,
+		typ=Block];
+	"20:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7fef3a5f1c10>",
+		fillcolor=springgreen,
+		label="20:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"19:BL" -> "20:IF"	[cond="[]",
+		lineno=None];
+	"Leaf_18:AL"	[def_var="['q']",
+		label="Leaf_18:AL"];
+	"20:IF" -> "22:IF"	[cond="['load']",
+		label="!(load)",
+		lineno=20];
+	"21:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fef3a5f1c50>",
+		fillcolor=firebrick,
+		label="21:NS
+q <= data;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fef3a5f1c50>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"20:IF" -> "21:NS"	[cond="['load']",
+		label=load,
+		lineno=20];
+	"24:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7fef3a5f4a90>",
+		fillcolor=springgreen,
+		label="24:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"25:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7fef3a5f4ad0>",
+		fillcolor=turquoise,
+		label="25:BL
+q[0] <= q[1];
+q[1] <= q[2];
+q[2] <= q[3];
+q[3] <= q[4];
+q[4] <= q[5];
+q[5] <= q[6];
+q[6] <= q[7];
+q[7] <= q[8];
+q[8] <= q[\
+9];
+q[9] <= q[10];
+q[10] <= q[11];
+q[11] <= q[12];
+q[12] <= q[13];
+q[13] <= q[14];",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fef3a5f4b10>, <pyverilog.vparser.ast.NonblockingSubstitution object \
+at 0x7fef3a5f4d90>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fef3a5f4fd0>, <pyverilog.vparser.ast.NonblockingSubstitution \
+object at 0x7fef3a5e9250>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fef3a5e9490>, <pyverilog.vparser.ast.NonblockingSubstitution \
+object at 0x7fef3a5e96d0>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fef3a5e9910>, <pyverilog.vparser.ast.NonblockingSubstitution \
+object at 0x7fef3a5e9b50>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fef3a5e9d90>, <pyverilog.vparser.ast.NonblockingSubstitution \
+object at 0x7fef3a5e9fd0>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fef3a5f11d0>, <pyverilog.vparser.ast.NonblockingSubstitution \
+object at 0x7fef3a5f1410>, <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fef3a5f1650>, <pyverilog.vparser.ast.NonblockingSubstitution \
+object at 0x7fef3a5f1890>]",
+		style=filled,
+		typ=Block];
+	"24:IF" -> "25:BL"	[cond="['amount']",
+		label="(amount == 2'b00)",
+		lineno=24];
+	"25:BL" -> "Leaf_18:AL"	[cond="[]",
+		lineno=None];
+	"18:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7fef3a5f1dd0>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="18:AL",
+		sens="['clk']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['load', 'ena', 'amount', 'data', 'q']"];
+	"18:AL" -> "19:BL"	[cond="[]",
+		lineno=None];
+	"23:BL" -> "24:IF"	[cond="[]",
+		lineno=None];
+	"21:NS" -> "Leaf_18:AL"	[cond="[]",
+		lineno=None];
+}

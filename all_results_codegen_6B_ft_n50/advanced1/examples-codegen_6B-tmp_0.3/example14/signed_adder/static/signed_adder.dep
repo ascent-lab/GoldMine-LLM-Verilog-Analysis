@@ -1,0 +1,8 @@
+a	s_signed
+a	overflow
+b	overflow
+b	b_signed
+b_signed	s_signed
+s_signed	s
+s_signed	overflow
+s	overflow

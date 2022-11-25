@@ -1,0 +1,6 @@
+carry	s
+a	carry
+a	sum
+b	carry
+b	sum
+sum	s

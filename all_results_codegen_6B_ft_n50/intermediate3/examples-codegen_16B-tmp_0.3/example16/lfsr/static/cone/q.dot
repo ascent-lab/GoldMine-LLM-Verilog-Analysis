@@ -1,0 +1,9 @@
+strict digraph "" {
+	q	[complexity=0,
+		importance=0.188679228875,
+		rank=0.0];
+	r_reg	[complexity=2,
+		importance=0.339622624,
+		rank=0.169811312];
+	r_reg -> q;
+}

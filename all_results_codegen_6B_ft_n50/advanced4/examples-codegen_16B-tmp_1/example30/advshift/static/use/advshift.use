@@ -1,0 +1,10 @@
+{'amount': {'DefVars': [None, None, None, None],
+            'Lines': ['21:C', '21:C', '21:C', '21:C'],
+            'Sensitivities': [['amount'], ['amount'], ['amount'], ['amount']]},
+ 'data': {'DefVars': ['q', 'q'],
+          'Lines': ['34:D', '26:D'],
+          'Sensitivities': [<pyverilog.vparser.ast.BlockingSubstitution object at 0x7ff7b8aeae90>,
+                            <pyverilog.vparser.ast.BlockingSubstitution object at 0x7ff7b8a7dd10>]},
+ 'ena': {'DefVars': [None, None, None, None],
+         'Lines': ['32:C', '32:C', '24:C', '24:C'],
+         'Sensitivities': [['ena'], ['ena'], ['ena'], ['ena']]}}

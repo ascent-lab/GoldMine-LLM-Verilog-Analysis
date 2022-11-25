@@ -1,0 +1,13 @@
+strict digraph "" {
+	sel	[complexity=1,
+		importance=0.749999843194,
+		rank=0.749999843194];
+	pos	[complexity=0,
+		importance=0.499999686387,
+		rank=0.0];
+	sel -> pos;
+	in	[complexity=1,
+		importance=2.24999890236,
+		rank=2.24999890236];
+	in -> pos;
+}

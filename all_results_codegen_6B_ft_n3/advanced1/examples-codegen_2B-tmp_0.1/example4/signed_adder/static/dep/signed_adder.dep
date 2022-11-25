@@ -1,0 +1,8 @@
+a	carry	1.0
+a	sum	1.0
+b	carry	1.0
+b	sum	1.0
+sum	overflow	1.0
+sum	s	1.0
+carry	overflow	1.0
+carry	s	1.0

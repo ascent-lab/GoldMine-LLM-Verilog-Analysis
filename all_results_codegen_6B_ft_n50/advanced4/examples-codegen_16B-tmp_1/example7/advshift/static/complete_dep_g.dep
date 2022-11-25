@@ -1,0 +1,9 @@
+load	q	6.0
+load	direction	4.0
+ena	q	11.0
+ena	direction	8.0
+direction	q	1.0
+q	q	1.0
+q	direction	10.0
+amount	direction	10.0
+data	q	1.0

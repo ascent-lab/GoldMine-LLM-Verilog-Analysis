@@ -1,0 +1,21 @@
+strict digraph "" {
+	a	[complexity=5,
+		importance=0.381092971124,
+		rank=0.0762185942248];
+	sum_signed	[complexity=2,
+		importance=0.286558350777,
+		rank=0.143279175389];
+	a -> sum_signed;
+	s	[complexity=0,
+		importance=0.132939519835,
+		rank=0.0];
+	b	[complexity=8,
+		importance=0.522894804337,
+		rank=0.0653618505421];
+	b_signed	[complexity=5,
+		importance=0.42836018399,
+		rank=0.0856720367981];
+	b -> b_signed;
+	b_signed -> sum_signed;
+	sum_signed -> s;
+}

@@ -1,0 +1,39 @@
+strict digraph "" {
+	a	[complexity=20,
+		importance=0.840159919446,
+		rank=0.0420079959723];
+	a_signed	[complexity=17,
+		importance=0.776223944325,
+		rank=0.0456602320191];
+	a -> a_signed;
+	b	[complexity=20,
+		importance=0.840159919446,
+		rank=0.0420079959723];
+	b_signed	[complexity=17,
+		importance=0.776223944325,
+		rank=0.0456602320191];
+	b -> b_signed;
+	sum_signed	[complexity=14,
+		importance=0.680319838893,
+		rank=0.0485942742066];
+	b_signed -> sum_signed;
+	overflow_signed	[complexity=2,
+		importance=0.324676059673,
+		rank=0.162338029837];
+	b_signed -> overflow_signed;
+	s	[complexity=12,
+		importance=0.568431644205,
+		rank=0.0473693036837];
+	sum_signed -> s;
+	a_signed -> sum_signed;
+	a_signed -> overflow_signed;
+	s_signed	[complexity=9,
+		importance=0.448551714528,
+		rank=0.0498390793921];
+	s -> s_signed;
+	s_signed -> overflow_signed;
+	overflow	[complexity=0,
+		importance=0.150849245019,
+		rank=0.0];
+	overflow_signed -> overflow;
+}

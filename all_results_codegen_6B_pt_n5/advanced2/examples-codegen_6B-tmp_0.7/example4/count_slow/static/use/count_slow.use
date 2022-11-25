@@ -1,0 +1,9 @@
+{'q': {'DefVars': [None, None],
+       'Lines': ['15:C', '15:C'],
+       'Sensitivities': [['q'], ['q']]},
+ 'reset': {'DefVars': [None, None, None, None],
+           'Lines': ['13:C', '13:C', '13:C', '13:C'],
+           'Sensitivities': [['reset'], ['reset'], ['reset'], ['reset']]},
+ 'slowena': {'DefVars': [None, None, None],
+             'Lines': ['14:C', '14:C', '14:C'],
+             'Sensitivities': [['slowena'], ['slowena'], ['slowena']]}}

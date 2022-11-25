@@ -1,0 +1,12 @@
+{'amount': {'DefVars': ['out'],
+            'Lines': ['11:D'],
+            'Sensitivities': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fdb18b23890>]},
+ 'data': {'DefVars': ['out'],
+          'Lines': ['11:D'],
+          'Sensitivities': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fdb18b23890>]},
+ 'load': {'DefVars': ['out'],
+          'Lines': ['11:D'],
+          'Sensitivities': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fdb18b23890>]},
+ 'out': {'DefVars': ['out'],
+         'Lines': ['11:D'],
+         'Sensitivities': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fdb18b23890>]}}

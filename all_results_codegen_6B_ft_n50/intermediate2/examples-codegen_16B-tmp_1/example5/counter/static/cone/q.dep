@@ -1,0 +1,9 @@
+[2]reset	[1]q
+[1]q	q
+[3]q	[2]q
+[2]q	[1]q
+[2]startIdle	[1]q
+[1]startIdle	q
+[1]reset	q
+[3]reset	[2]q
+[3]startIdle	[2]q

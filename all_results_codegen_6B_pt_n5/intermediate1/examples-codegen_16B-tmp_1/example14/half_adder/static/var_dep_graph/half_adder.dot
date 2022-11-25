@@ -1,0 +1,11 @@
+strict digraph "" {
+	a -> o3	[weight=1.0];
+	a -> o1	[weight=1.0];
+	b -> sum	[weight=1.0];
+	b -> o2	[weight=1.0];
+	b -> o1	[weight=1.0];
+	o3 -> cout	[weight=1.0];
+	o2 -> o3	[weight=1.0];
+	o1 -> sum	[weight=1.0];
+	o1 -> o2	[weight=1.0];
+}

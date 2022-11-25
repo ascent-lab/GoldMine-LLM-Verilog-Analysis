@@ -1,0 +1,65 @@
+strict digraph "" {
+	"[1]q"	[complexity=20,
+		importance=4.2,
+		rank=0.21];
+	q	[complexity=10,
+		importance=0.6,
+		rank=0.06];
+	"[1]q" -> q;
+	"[3]q"	[complexity=40,
+		importance=155.4,
+		rank=3.885];
+	"[2]q"	[complexity=30,
+		importance=25.8,
+		rank=0.86];
+	"[3]q" -> "[2]q";
+	"[3]ena"	[complexity=31,
+		importance=103.3,
+		rank=3.33225806452];
+	"[3]ena" -> "[2]q";
+	"[2]ena"	[complexity=21,
+		importance=16.9,
+		rank=0.804761904762];
+	"[2]ena" -> "[1]q";
+	"[2]q" -> "[1]q";
+	"[2]data"	[complexity=22,
+		importance=4.3,
+		rank=0.195454545455];
+	"[2]data" -> "[1]q";
+	"[3]data"	[complexity=32,
+		importance=25.9,
+		rank=0.809375];
+	"[3]data" -> "[2]q";
+	"[1]data"	[complexity=12,
+		importance=0.7,
+		rank=0.0583333333333];
+	"[1]data" -> q;
+	"[1]ena"	[complexity=11,
+		importance=2.5,
+		rank=0.227272727273];
+	"[1]ena" -> q;
+	"[3]load"	[complexity=31,
+		importance=129.1,
+		rank=4.16451612903];
+	"[3]load" -> "[2]q";
+	"[1]load"	[complexity=11,
+		importance=3.1,
+		rank=0.281818181818];
+	"[1]load" -> q;
+	"[3]amount"	[complexity=31,
+		importance=103.3,
+		rank=3.33225806452];
+	"[3]amount" -> "[2]q";
+	"[2]load"	[complexity=21,
+		importance=21.1,
+		rank=1.00476190476];
+	"[2]load" -> "[1]q";
+	"[1]amount"	[complexity=11,
+		importance=2.5,
+		rank=0.227272727273];
+	"[1]amount" -> q;
+	"[2]amount"	[complexity=21,
+		importance=16.9,
+		rank=0.804761904762];
+	"[2]amount" -> "[1]q";
+}

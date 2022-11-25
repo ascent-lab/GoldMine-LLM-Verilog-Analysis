@@ -1,0 +1,10 @@
+{'addr': {'DefVars': ['q'],
+          'Lines': ['14:D'],
+          'Sensitivities': [<pyverilog.vparser.ast.Assign object at 0x7f199e1f2450>]},
+ 'data': {'DefVars': ['ram'],
+          'Lines': ['13:D'],
+          'Sensitivities': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f199e18e550>]},
+ 'ram': {'DefVars': ['q'],
+         'Lines': ['14:D'],
+         'Sensitivities': [<pyverilog.vparser.ast.Assign object at 0x7f199e1f2450>]},
+ 'we': {'DefVars': [None], 'Lines': ['13:C'], 'Sensitivities': [['we']]}}

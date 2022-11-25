@@ -1,0 +1,5 @@
+strict digraph "" {
+	q	[complexity=0,
+		importance=0.333333333333,
+		rank=0.0];
+}

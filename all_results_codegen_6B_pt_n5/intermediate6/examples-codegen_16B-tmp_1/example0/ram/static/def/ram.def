@@ -1,0 +1,12 @@
+{'q': {'CDeps': [],
+       'CLines': [],
+       'Clocked': False,
+       'DDeps': [['we', 'ram', 'addr']],
+       'DLines': ['12:D'],
+       'Expressions': [<pyverilog.vparser.ast.Assign object at 0x7f0fe2a63890>]},
+ 'ram': {'CDeps': [[[], [], ['we']]],
+         'CLines': [[None, None, '16:C']],
+         'Clocked': True,
+         'DDeps': [['data']],
+         'DLines': ['17:D'],
+         'Expressions': [<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f0fe2a7d4d0>]}}

@@ -1,0 +1,25 @@
+strict digraph "" {
+	"[2]data"	[complexity=4,
+		importance=0.728813394229,
+		rank=0.182203348557];
+	"[1]q_temp"	[complexity=2,
+		importance=0.593220091343,
+		rank=0.296610045672];
+	"[2]data" -> "[1]q_temp";
+	"[1]load"	[complexity=1,
+		importance=0.491525590287,
+		rank=0.491525590287];
+	q	[complexity=0,
+		importance=0.355932287401,
+		rank=0.0];
+	"[1]load" -> q;
+	"[1]ena"	[complexity=1,
+		importance=0.491525590287,
+		rank=0.491525590287];
+	"[1]ena" -> q;
+	"[1]q_temp" -> q;
+	"[2]load"	[complexity=3,
+		importance=0.728813394229,
+		rank=0.242937798076];
+	"[2]load" -> "[1]q_temp";
+}

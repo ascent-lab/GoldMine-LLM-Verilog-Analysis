@@ -1,0 +1,3 @@
+reset	q_next
+q_next	q_next
+q	q_next

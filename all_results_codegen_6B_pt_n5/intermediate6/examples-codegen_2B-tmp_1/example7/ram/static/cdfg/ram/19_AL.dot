@@ -1,0 +1,25 @@
+strict digraph "" {
+	node [label="\N"];
+	"Leaf_19:AL"	[def_var="['ram']",
+		label="Leaf_19:AL"];
+	"19:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f2aaf0c6dd0>",
+		clk_sens=False,
+		fillcolor=gold,
+		label="19:AL",
+		sens="['we']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['data']"];
+	"20:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f2aaf0c6ed0>",
+		fillcolor=turquoise,
+		label="20:BL
+ram[addr] = data;",
+		statements="[<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f2aaf0c6f10>]",
+		style=filled,
+		typ=Block];
+	"19:AL" -> "20:BL"	[cond="[]",
+		lineno=None];
+	"20:BL" -> "Leaf_19:AL"	[cond="[]",
+		lineno=None];
+}

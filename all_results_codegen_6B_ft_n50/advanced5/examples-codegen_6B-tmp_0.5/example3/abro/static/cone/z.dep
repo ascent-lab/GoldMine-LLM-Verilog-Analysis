@@ -1,0 +1,16 @@
+[2]reset	[1]cur_state
+[1]cur_state	[1]next_state
+[1]next_state	cur_state
+[1]b	[1]next_state
+[3]b	[3]next_state
+[2]next_state	[1]cur_state
+[2]cur_state	[2]next_state
+cur_state	z
+[1]a	[1]next_state
+[3]next_state	[2]cur_state
+[3]a	[3]next_state
+[3]cur_state	[3]next_state
+[2]a	[2]next_state
+[1]reset	cur_state
+[3]reset	[2]cur_state
+[2]b	[2]next_state

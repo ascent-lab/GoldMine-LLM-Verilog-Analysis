@@ -1,0 +1,7 @@
+reset	present_state
+S10	next_state
+IDLE	next_state
+present_state	z
+present_state	next_state
+x	next_state
+next_state	present_state

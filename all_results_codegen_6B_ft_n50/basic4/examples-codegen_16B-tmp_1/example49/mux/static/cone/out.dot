@@ -1,0 +1,22 @@
+strict digraph "" {
+	a	[complexity=5,
+		importance=0.543859468496,
+		rank=0.108771893699];
+	out	[complexity=0,
+		importance=0.403508510113,
+		rank=0.0];
+	a -> out;
+	selbar	[complexity=5,
+		importance=0.578947124851,
+		rank=0.11578942497];
+	selbar -> out;
+	sel	[complexity=7,
+		importance=0.719298083234,
+		rank=0.102756869033];
+	sel -> selbar;
+	sel -> out;
+	b	[complexity=5,
+		importance=0.543859468496,
+		rank=0.108771893699];
+	b -> out;
+}

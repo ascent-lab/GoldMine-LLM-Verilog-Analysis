@@ -1,0 +1,61 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"19:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7fcce964ee90>",
+		fillcolor=turquoise,
+		label="19:BL
+r_reg <= r_next;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fcce96c6150>]",
+		style=filled,
+		typ=Block];
+	"Leaf_18:AL"	[def_var="['r_reg']",
+		label="Leaf_18:AL"];
+	"19:BL" -> "Leaf_18:AL"	[cond="[]",
+		lineno=None];
+	"23:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fcce93185d0>",
+		def_var="['q']",
+		fillcolor=deepskyblue,
+		label="23:AS
+q = r_reg;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg']"];
+	"Leaf_18:AL" -> "23:AS";
+	"15:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fcce96a33d0>",
+		def_var="['r_next']",
+		fillcolor=deepskyblue,
+		label="15:AS
+r_next = (reset == 1'b0)? 5'b1 : 
+(feedback_value == 1'b0)? r_reg : r_reg & { q[4], q[4] ^ q[3], q[4] ^ q[0] } ^ { q[2], q[\
+2] ^ q[1], q[2] ^ q[0] };",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['reset', 'feedback_value', 'r_reg', 'r_reg', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q']"];
+	"Leaf_18:AL" -> "15:AS";
+	"22:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fcce93182d0>",
+		def_var="['feedback_value']",
+		fillcolor=deepskyblue,
+		label="22:AS
+feedback_value = r_reg & { q[2], q[2] ^ q[1], q[2] ^ q[0] } ^ { q[2], q[2] ^ q[1], q[2] ^ q[0] };",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q']"];
+	"Leaf_18:AL" -> "22:AS";
+	"23:AS" -> "15:AS";
+	"23:AS" -> "22:AS";
+	"18:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7fcce96c6550>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="18:AL",
+		sens="['clk']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['r_next']"];
+	"18:AL" -> "19:BL"	[cond="[]",
+		lineno=None];
+	"15:AS" -> "18:AL";
+	"22:AS" -> "15:AS";
+}

@@ -1,0 +1,21 @@
+strict digraph "" {
+	x	[complexity=4,
+		importance=0.466666630144,
+		rank=0.116666657536];
+	z	[complexity=0,
+		importance=0.333333096832,
+		rank=0.0];
+	x -> z;
+	"[1]reset"	[complexity=5,
+		importance=1.33333233344,
+		rank=0.266666466688];
+	present_state	[complexity=4,
+		importance=0.599999400064,
+		rank=0.149999850016];
+	"[1]reset" -> present_state;
+	present_state -> z;
+	"[1]next_state"	[complexity=6,
+		importance=0.733332933376,
+		rank=0.122222155563];
+	"[1]next_state" -> present_state;
+}

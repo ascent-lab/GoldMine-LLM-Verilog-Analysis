@@ -1,0 +1,4 @@
+strict digraph "" {
+	sel -> pos	[weight=5.0];
+	in -> pos	[weight=6.0];
+}

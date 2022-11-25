@@ -1,0 +1,5 @@
+digraph "" {
+	q -> q	[weight=2.0];
+	amount -> q	[weight=4.0];
+	data -> q	[weight=4.0];
+}

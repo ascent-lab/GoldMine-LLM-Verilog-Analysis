@@ -1,0 +1,3 @@
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/left_rotate/left_rotate_bench.v:25: error: Could not find variable ``rst'' in ``left_rotate_bench''
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/left_rotate/left_rotate_bench.v:27: error: Could not find variable ``rst'' in ``left_rotate_bench''
+2 error(s) during elaboration.

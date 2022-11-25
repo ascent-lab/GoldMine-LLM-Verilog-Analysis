@@ -1,0 +1,37 @@
+strict digraph "" {
+	a	[complexity=6,
+		importance=0.375001323436,
+		rank=0.0625002205726];
+	sum	[complexity=3,
+		importance=0.358334671555,
+		rank=0.119444890518];
+	a -> sum;
+	w	[complexity=3,
+		importance=0.308334702197,
+		rank=0.102778234066];
+	a -> w;
+	b	[complexity=9,
+		importance=0.475000894217,
+		rank=0.0527778771352];
+	y	[complexity=7,
+		importance=0.458334242336,
+		rank=0.0654763203337];
+	b -> y;
+	x	[complexity=6,
+		importance=0.408334272978,
+		rank=0.068055712163];
+	b -> x;
+	cout	[complexity=0,
+		importance=0.200001621508,
+		rank=0.0];
+	sum -> cout;
+	b_not	[complexity=9,
+		importance=0.475000894217,
+		rank=0.0527778771352];
+	b_not -> y;
+	b_not -> x;
+	w -> cout;
+	y -> sum;
+	x -> sum;
+	x -> w;
+}

@@ -1,0 +1,9 @@
+strict digraph "" {
+	q	[complexity=0,
+		importance=0.599999904633,
+		rank=0.0];
+	"[1]reset"	[complexity=1,
+		importance=1.59999990463,
+		rank=1.59999990463];
+	"[1]reset" -> q;
+}

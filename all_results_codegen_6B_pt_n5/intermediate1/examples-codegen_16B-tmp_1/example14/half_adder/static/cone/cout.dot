@@ -1,0 +1,27 @@
+strict digraph "" {
+	a	[complexity=11,
+		importance=0.759323664731,
+		rank=0.0690294240665];
+	o3	[complexity=2,
+		importance=0.383391037313,
+		rank=0.191695518657];
+	a -> o3;
+	o1	[complexity=8,
+		importance=0.663848833158,
+		rank=0.0829811041448];
+	a -> o1;
+	b	[complexity=11,
+		importance=0.759323664731,
+		rank=0.0690294240665];
+	o2	[complexity=5,
+		importance=0.528592541009,
+		rank=0.105718508202];
+	b -> o2;
+	b -> o1;
+	cout	[complexity=0,
+		importance=0.191446858872,
+		rank=0.0];
+	o3 -> cout;
+	o2 -> o3;
+	o1 -> o2;
+}

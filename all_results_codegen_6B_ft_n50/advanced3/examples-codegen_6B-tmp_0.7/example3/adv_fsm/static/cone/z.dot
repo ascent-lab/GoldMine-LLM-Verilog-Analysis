@@ -1,0 +1,81 @@
+strict digraph "" {
+	"[1]IDLE"	[complexity=21,
+		importance=2.8198756048,
+		rank=0.134279790705];
+	"[1]next_state"	[complexity=5,
+		importance=0.68530016128,
+		rank=0.137060032256];
+	"[1]IDLE" -> "[1]next_state";
+	"[2]reset"	[complexity=7,
+		importance=7.4782613982,
+		rank=1.06832305689];
+	"[1]present_state"	[complexity=6,
+		importance=3.69979321926,
+		rank=0.61663220321];
+	"[2]reset" -> "[1]present_state";
+	"[1]S101"	[complexity=9,
+		importance=0.76397512096,
+		rank=0.0848861245511];
+	"[1]S101" -> "[1]next_state";
+	"[2]next_state"	[complexity=8,
+		importance=4.01035176745,
+		rank=0.501293970932];
+	"[2]next_state" -> "[1]present_state";
+	"[3]IDLE"	[complexity=27,
+		importance=82.621114153,
+		rank=3.06004126492];
+	"[3]next_state"	[complexity=11,
+		importance=20.6356097983,
+		rank=1.87596452712];
+	"[3]IDLE" -> "[3]next_state";
+	"[2]x"	[complexity=28,
+		importance=20.1304337969,
+		rank=0.718944064177];
+	"[2]x" -> "[2]next_state";
+	present_state	[complexity=3,
+		importance=0.374741613087,
+		rank=0.124913871029];
+	"[1]next_state" -> present_state;
+	"[3]present_state"	[complexity=12,
+		importance=103.451341404,
+		rank=8.62094511704];
+	"[3]present_state" -> "[3]next_state";
+	"[1]x"	[complexity=25,
+		importance=3.50517576608,
+		rank=0.140207030643];
+	"[1]x" -> "[1]next_state";
+	"[1]present_state" -> "[1]next_state";
+	"[2]present_state"	[complexity=9,
+		importance=20.3250512501,
+		rank=2.25833902779];
+	"[2]present_state" -> "[2]next_state";
+	"[3]x"	[complexity=31,
+		importance=103.256723951,
+		rank=3.33086206294];
+	"[3]x" -> "[3]next_state";
+	"[3]next_state" -> "[2]present_state";
+	"[2]IDLE"	[complexity=24,
+		importance=16.1200820295,
+		rank=0.671670084562];
+	"[2]IDLE" -> "[2]next_state";
+	z	[complexity=0,
+		importance=0.101449200226,
+		rank=0.0];
+	present_state -> z;
+	"[3]S101"	[complexity=15,
+		importance=20.714284758,
+		rank=1.3809523172];
+	"[3]S101" -> "[3]next_state";
+	"[1]reset"	[complexity=4,
+		importance=0.828158185853,
+		rank=0.207039546463];
+	"[1]reset" -> present_state;
+	"[3]reset"	[complexity=10,
+		importance=40.7287774599,
+		rank=4.07287774599];
+	"[3]reset" -> "[2]present_state";
+	"[2]S101"	[complexity=12,
+		importance=4.08902672713,
+		rank=0.340752227261];
+	"[2]S101" -> "[2]next_state";
+}

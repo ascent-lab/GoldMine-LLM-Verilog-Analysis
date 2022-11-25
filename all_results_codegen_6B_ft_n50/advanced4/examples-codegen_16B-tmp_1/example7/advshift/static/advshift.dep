@@ -1,0 +1,9 @@
+load	q
+load	direction
+ena	q
+ena	direction
+direction	q
+q	q
+q	direction
+amount	direction
+data	q

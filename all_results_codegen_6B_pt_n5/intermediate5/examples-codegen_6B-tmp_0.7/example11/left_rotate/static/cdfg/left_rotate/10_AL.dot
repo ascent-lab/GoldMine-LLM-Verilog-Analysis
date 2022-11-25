@@ -1,0 +1,25 @@
+strict digraph "" {
+	node [label="\N"];
+	"11:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f2b60548050>",
+		fillcolor=firebrick,
+		label="11:NS
+out <= (load == 1)? out_reg(data) : (out_reg(out) << amount) | (out_reg(out) >> 7 - amount);",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f2b60548050>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"Leaf_10:AL"	[def_var="['out']",
+		label="Leaf_10:AL"];
+	"11:NS" -> "Leaf_10:AL"	[cond="[]",
+		lineno=None];
+	"10:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f2b60548810>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="10:AL",
+		sens="['clk', 'reset']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['load', 'data', 'amount', 'out_reg', 'out']"];
+	"10:AL" -> "11:NS"	[cond="[]",
+		lineno=None];
+}

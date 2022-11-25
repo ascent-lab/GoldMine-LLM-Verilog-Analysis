@@ -1,0 +1,3 @@
+digraph "" {
+	q -> q	[weight=1.0];
+}

@@ -1,0 +1,82 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"18:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fd48be7d4d0>",
+		def_var="['y']",
+		fillcolor=deepskyblue,
+		label="18:AS
+y = b & ~b_not;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['b', 'b_not']"];
+	"19:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fd48be66090>",
+		def_var="['sum']",
+		fillcolor=deepskyblue,
+		label="19:AS
+sum = a ^ x & y;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'x', 'y']"];
+	"18:AS" -> "19:AS";
+	"12:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fd48be63d10>",
+		def_var="['vdd']",
+		fillcolor=deepskyblue,
+		label="12:AS
+vdd = 1'b0;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="[]"];
+	"11:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fd48bbd6910>",
+		def_var="['gnd']",
+		fillcolor=deepskyblue,
+		label="11:AS
+gnd = 1'b1;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="[]"];
+	"16:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fd48bbcecd0>",
+		def_var="['x']",
+		fillcolor=deepskyblue,
+		label="16:AS
+x = b_not & b;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['b_not', 'b']"];
+	"16:AS" -> "19:AS";
+	"17:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fd48be71650>",
+		def_var="['w']",
+		fillcolor=deepskyblue,
+		label="17:AS
+w = a & x;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'x']"];
+	"16:AS" -> "17:AS";
+	"15:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fd48be63610>",
+		def_var="['b_not']",
+		fillcolor=deepskyblue,
+		label="15:AS
+b_not = 1'b1;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="[]"];
+	"15:AS" -> "18:AS";
+	"15:AS" -> "16:AS";
+	"20:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fd48fd85d10>",
+		def_var="['cout']",
+		fillcolor=deepskyblue,
+		label="20:AS
+cout = w | sum;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['w', 'sum']"];
+	"19:AS" -> "20:AS";
+	"17:AS" -> "20:AS";
+}

@@ -1,0 +1,6 @@
+{'q': {'DefVars': [None, 'q', None],
+       'Lines': ['17:C', '23:D', '17:C'],
+       'Sensitivities': [['q'],
+                         <pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f1aefab1150>,
+                         ['q']]},
+ 'reset': {'DefVars': [None], 'Lines': ['13:C'], 'Sensitivities': [['reset']]}}

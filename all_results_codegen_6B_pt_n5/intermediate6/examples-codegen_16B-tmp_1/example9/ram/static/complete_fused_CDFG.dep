@@ -1,0 +1,4 @@
+17:IF	18:BS
+18:BS	Leaf_16:AL
+16:AL	17:IF
+Leaf_16:AL	19:AS

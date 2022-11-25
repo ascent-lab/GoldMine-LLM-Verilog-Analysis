@@ -1,0 +1,74 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"23:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f932ef98f10>",
+		def_var="['overflow_signed']",
+		fillcolor=deepskyblue,
+		label="23:AS
+overflow_signed = a_signed[7] & b_signed[7] & ~s_signed[7] | ~(a_signed[7] | b_signed[7]) & s_signed[7];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a_signed', 'b_signed', 's_signed', 'a_signed', 'b_signed', 's_signed']"];
+	"25:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f932ef98f90>",
+		def_var="['overflow']",
+		fillcolor=deepskyblue,
+		label="25:AS
+overflow = overflow_signed;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['overflow_signed']"];
+	"23:AS" -> "25:AS";
+	"19:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f932f3260d0>",
+		def_var="['a_signed']",
+		fillcolor=deepskyblue,
+		label="19:AS
+a_signed = { a[6:0], a[7] };",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'a']"];
+	"19:AS" -> "23:AS";
+	"21:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f932f3a0fd0>",
+		def_var="['sum_signed']",
+		fillcolor=deepskyblue,
+		label="21:AS
+sum_signed = a_signed + b_signed;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a_signed', 'b_signed']"];
+	"19:AS" -> "21:AS";
+	"26:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f932ef984d0>",
+		def_var="['s']",
+		fillcolor=deepskyblue,
+		label="26:AS
+s = sum_signed;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['sum_signed']"];
+	"21:AS" -> "26:AS";
+	"17:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f932f331290>",
+		def_var="['s_signed']",
+		fillcolor=deepskyblue,
+		label="17:AS
+s_signed = { s[6:0], s[7] };",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['s', 's']"];
+	"26:AS" -> "17:AS";
+	"15:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f932f323510>",
+		def_var="['b_signed']",
+		fillcolor=deepskyblue,
+		label="15:AS
+b_signed = { b[6:0], b[7] };",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['b', 'b']"];
+	"15:AS" -> "23:AS";
+	"15:AS" -> "21:AS";
+	"17:AS" -> "23:AS";
+}

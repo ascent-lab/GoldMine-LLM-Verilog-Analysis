@@ -1,0 +1,6 @@
+digraph "" {
+	reset -> q	[weight=1.0];
+	reset -> incr	[weight=2.0];
+	incr -> incr	[weight=1.0];
+	clk -> incr	[weight=1.0];
+}

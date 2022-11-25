@@ -1,0 +1,75 @@
+strict digraph "" {
+	"[2]reset"	[complexity=14,
+		importance=2.74877989969,
+		rank=0.196341421407];
+	"[1]r_reg"	[complexity=13,
+		importance=1.32438994985,
+		rank=0.101876149988];
+	"[2]reset" -> "[1]r_reg";
+	"[1]q"	[complexity=11,
+		importance=1.04634164148,
+		rank=0.0951219674075];
+	"[1]feedback_value"	[complexity=7,
+		importance=0.9,
+		rank=0.128571428571];
+	"[1]q" -> "[1]feedback_value";
+	"[1]r_next"	[complexity=4,
+		importance=0.680487839185,
+		rank=0.170121959796];
+	"[1]feedback_value" -> "[1]r_next";
+	"[3]q"	[complexity=33,
+		importance=2.84634164148,
+		rank=0.0862527770146];
+	"[3]feedback_value"	[complexity=29,
+		importance=2.7,
+		rank=0.0931034482759];
+	"[3]q" -> "[3]feedback_value";
+	"[1]r_reg" -> "[1]q";
+	"[1]r_reg" -> "[1]feedback_value";
+	"[1]r_reg" -> "[1]r_next";
+	"[3]r_next"	[complexity=26,
+		importance=2.48048783918,
+		rank=0.0954033784302];
+	"[3]feedback_value" -> "[3]r_next";
+	"[2]r_reg"	[complexity=24,
+		importance=2.22438994985,
+		rank=0.0926829145769];
+	"[2]feedback_value"	[complexity=18,
+		importance=1.8,
+		rank=0.1];
+	"[2]r_reg" -> "[2]feedback_value";
+	"[2]r_next"	[complexity=15,
+		importance=1.58048783918,
+		rank=0.105365855946];
+	"[2]r_reg" -> "[2]r_next";
+	"[2]q"	[complexity=22,
+		importance=1.94634164148,
+		rank=0.0884700746128];
+	"[2]r_reg" -> "[2]q";
+	"[3]r_next" -> "[2]r_reg";
+	"[2]feedback_value" -> "[2]r_next";
+	"[3]r_reg"	[complexity=35,
+		importance=3.12438994985,
+		rank=0.0892682842813];
+	"[3]r_reg" -> "[3]q";
+	"[3]r_reg" -> "[3]feedback_value";
+	"[3]r_reg" -> "[3]r_next";
+	q	[complexity=0,
+		importance=0.146341641482,
+		rank=0.0];
+	r_reg	[complexity=2,
+		importance=0.424389949846,
+		rank=0.212194974923];
+	"[1]r_next" -> r_reg;
+	"[2]r_next" -> "[1]r_reg";
+	"[2]q" -> "[2]feedback_value";
+	r_reg -> q;
+	"[1]reset"	[complexity=3,
+		importance=0.948779899691,
+		rank=0.316259966564];
+	"[1]reset" -> r_reg;
+	"[3]reset"	[complexity=25,
+		importance=4.54877989969,
+		rank=0.181951195988];
+	"[3]reset" -> "[2]r_reg";
+}

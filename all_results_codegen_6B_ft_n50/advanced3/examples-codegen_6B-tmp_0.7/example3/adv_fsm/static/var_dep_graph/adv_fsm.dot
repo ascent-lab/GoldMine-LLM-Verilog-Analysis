@@ -1,0 +1,9 @@
+strict digraph "" {
+	reset -> present_state	[weight=2.0];
+	S101 -> next_state	[weight=1.0];
+	IDLE -> next_state	[weight=4.0];
+	present_state -> z	[weight=1.0];
+	present_state -> next_state	[weight=5.0];
+	x -> next_state	[weight=5.0];
+	next_state -> present_state	[weight=1.0];
+}

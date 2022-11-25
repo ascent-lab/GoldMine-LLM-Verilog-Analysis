@@ -1,0 +1,105 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"16:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f0158ecee90>",
+		fillcolor=firebrick,
+		label="16:NS
+q <= 4'b0000;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f0158ecee90>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"Leaf_11:AL"	[def_var="['q']",
+		label="Leaf_11:AL"];
+	"16:NS" -> "Leaf_11:AL"	[cond="[]",
+		lineno=None];
+	"22:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f0158f31050>",
+		fillcolor=turquoise,
+		label="22:BL
+q <= q + 4'b0001;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f0158f26950>]",
+		style=filled,
+		typ=Block];
+	"22:BL" -> "Leaf_11:AL"	[cond="[]",
+		lineno=None];
+	"19:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f0158f3d610>",
+		fillcolor=springgreen,
+		label="19:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"19:IF" -> "22:BL"	[cond="['q']",
+		label="!((q == 4'd5))",
+		lineno=19];
+	"20:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f0158f3d6d0>",
+		fillcolor=firebrick,
+		label="20:NS
+q <= 4'b0000;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f0158f3d6d0>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"19:IF" -> "20:NS"	[cond="['q']",
+		label="(q == 4'd5)",
+		lineno=19];
+	"18:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f0158ececd0>",
+		fillcolor=turquoise,
+		label="18:BL",
+		statements="[]",
+		style=filled,
+		typ=Block];
+	"18:BL" -> "19:IF"	[cond="[]",
+		lineno=None];
+	"12:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f0158fb50d0>",
+		fillcolor=turquoise,
+		label="12:BL",
+		statements="[]",
+		style=filled,
+		typ=Block];
+	"13:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f0158ed6810>",
+		fillcolor=springgreen,
+		label="13:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"12:BL" -> "13:IF"	[cond="[]",
+		lineno=None];
+	"20:NS" -> "Leaf_11:AL"	[cond="[]",
+		lineno=None];
+	"15:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f0158ece290>",
+		fillcolor=springgreen,
+		label="15:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"13:IF" -> "15:IF"	[cond="['reset']",
+		label="!((reset == 1'b0))",
+		lineno=13];
+	"14:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f0158ed6750>",
+		fillcolor=firebrick,
+		label="14:NS
+q <= 4'b0000;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f0158ed6750>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"13:IF" -> "14:NS"	[cond="['reset']",
+		label="(reset == 1'b0)",
+		lineno=13];
+	"15:IF" -> "16:NS"	[cond="['q']",
+		label="(q == 4'd9)",
+		lineno=15];
+	"15:IF" -> "18:BL"	[cond="['q']",
+		label="!((q == 4'd9))",
+		lineno=15];
+	"11:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f0158f31550>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="11:AL",
+		sens="['clk', 'reset']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['reset', 'q']"];
+	"11:AL" -> "12:BL"	[cond="[]",
+		lineno=None];
+	"Leaf_11:AL" -> "11:AL";
+	"14:NS" -> "Leaf_11:AL"	[cond="[]",
+		lineno=None];
+}

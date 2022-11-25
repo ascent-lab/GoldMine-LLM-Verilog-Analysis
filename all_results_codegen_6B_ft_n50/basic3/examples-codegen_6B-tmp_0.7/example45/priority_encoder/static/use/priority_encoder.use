@@ -1,0 +1,6 @@
+{'in': {'DefVars': ['pos', 'pos', 'pos', 'pos'],
+        'Lines': ['8:D', '8:D', '9:D', '9:D'],
+        'Sensitivities': [<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f72248d6850>,
+                          <pyverilog.vparser.ast.BlockingSubstitution object at 0x7f72248d6850>,
+                          <pyverilog.vparser.ast.BlockingSubstitution object at 0x7f72248ce2d0>,
+                          <pyverilog.vparser.ast.BlockingSubstitution object at 0x7f72248ce2d0>]}}

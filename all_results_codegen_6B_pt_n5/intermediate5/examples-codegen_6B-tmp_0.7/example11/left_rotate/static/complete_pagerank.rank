@@ -1,0 +1,7 @@
+Variable | Rank
+-------- | ----
+  out    | 0.6 
+  load   | 0.1 
+out_reg  | 0.1 
+ amount  | 0.1 
+  data   | 0.1 

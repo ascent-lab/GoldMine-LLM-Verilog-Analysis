@@ -1,0 +1,12 @@
+strict digraph "" {
+	node [label="\N"];
+	"40:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f222ebbced0>",
+		def_var="['out']",
+		fillcolor=deepskyblue,
+		label="40:AS
+out = present_state;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['present_state']"];
+}

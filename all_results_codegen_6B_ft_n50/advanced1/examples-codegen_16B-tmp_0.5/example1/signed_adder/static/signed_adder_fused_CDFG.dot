@@ -1,0 +1,92 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"18:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fed228e6590>",
+		def_var="['s']",
+		fillcolor=deepskyblue,
+		label="18:AS
+s[3] = a[3] ^ b[3];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'b']"];
+	"23:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fed225586d0>",
+		def_var="['overflow']",
+		fillcolor=deepskyblue,
+		label="23:AS
+overflow = a[7] ^ b[7] & ~s[7];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'b', 's']"];
+	"18:AS" -> "23:AS";
+	"16:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fed2288e510>",
+		def_var="['s']",
+		fillcolor=deepskyblue,
+		label="16:AS
+s[1] = a[1] ^ b[1];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'b']"];
+	"16:AS" -> "23:AS";
+	"20:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fed225588d0>",
+		def_var="['s']",
+		fillcolor=deepskyblue,
+		label="20:AS
+s[5] = a[5] ^ b[5];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'b']"];
+	"20:AS" -> "23:AS";
+	"19:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fed229608d0>",
+		def_var="['s']",
+		fillcolor=deepskyblue,
+		label="19:AS
+s[4] = a[4] ^ b[4];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'b']"];
+	"19:AS" -> "23:AS";
+	"21:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fed22558a50>",
+		def_var="['s']",
+		fillcolor=deepskyblue,
+		label="21:AS
+s[6] = a[6] ^ b[6];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'b']"];
+	"21:AS" -> "23:AS";
+	"22:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fed22558bd0>",
+		def_var="['s']",
+		fillcolor=deepskyblue,
+		label="22:AS
+s[7] = a[7] ^ b[7];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'b']"];
+	"22:AS" -> "23:AS";
+	"15:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fed228e37d0>",
+		def_var="['s']",
+		fillcolor=deepskyblue,
+		label="15:AS
+s[0] = a[0] ^ b[0];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'b']"];
+	"15:AS" -> "23:AS";
+	"17:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fed228e6690>",
+		def_var="['s']",
+		fillcolor=deepskyblue,
+		label="17:AS
+s[2] = a[2] ^ b[2];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'b']"];
+	"17:AS" -> "23:AS";
+}

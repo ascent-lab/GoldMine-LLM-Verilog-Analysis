@@ -1,0 +1,16 @@
+[1]q	q
+[3]q	[2]q
+[3]ena	[1]q
+[2]ena	q
+[2]q	[1]q
+[2]data	q
+[3]data	[1]q
+[1]data	q
+[1]ena	q
+q	q
+[3]load	[1]q
+[1]load	q
+[3]amount	[1]q
+[2]load	q
+[1]amount	q
+[2]amount	q

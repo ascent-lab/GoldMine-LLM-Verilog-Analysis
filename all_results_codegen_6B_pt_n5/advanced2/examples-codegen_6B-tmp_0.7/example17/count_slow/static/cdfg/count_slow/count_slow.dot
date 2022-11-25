@@ -1,0 +1,51 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"15:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f47a78f5d10>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="15:AL",
+		sens="['clk']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['reset', 'q', 'slowena']"];
+	"16:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f47a7877390>",
+		fillcolor=firebrick,
+		label="16:NS
+q <= ~reset & slowena & q;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f47a7877390>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"15:AL" -> "16:NS"	[cond="[]",
+		lineno=None];
+	"Leaf_15:AL"	[def_var="['q']",
+		label="Leaf_15:AL"];
+	"16:NS" -> "Leaf_15:AL"	[cond="[]",
+		lineno=None];
+	"Leaf_15:AL" -> "15:AL";
+	"24:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f47a75d6810>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="24:AL",
+		sens="['clk']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['reset', 'q', 'slowena']"];
+	"Leaf_15:AL" -> "24:AL";
+	"Leaf_24:AL"	[def_var="['q']",
+		label="Leaf_24:AL"];
+	"Leaf_24:AL" -> "15:AL";
+	"Leaf_24:AL" -> "24:AL";
+	"25:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f47a7863ed0>",
+		fillcolor=firebrick,
+		label="25:NS
+q <= ~reset & slowena & ~q;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f47a7863ed0>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"25:NS" -> "Leaf_24:AL"	[cond="[]",
+		lineno=None];
+	"24:AL" -> "25:NS"	[cond="[]",
+		lineno=None];
+}

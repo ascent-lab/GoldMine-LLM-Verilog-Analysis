@@ -1,0 +1,7 @@
+13:AL-->14:NS-->Leaf_13:AL
+15:AL-->16:CS-->18:CA-->18:NS-->Leaf_15:AL
+15:AL-->16:CS-->17:CA-->17:NS-->Leaf_15:AL
+20:AL-->21:CS-->24:CA-->24:IF-->24:NS-->Leaf_20:AL
+20:AL-->21:CS-->24:CA-->24:IF-->25:NS-->Leaf_20:AL
+20:AL-->21:CS-->22:CA-->22:IF-->22:NS-->Leaf_20:AL
+20:AL-->21:CS-->22:CA-->22:IF-->23:NS-->Leaf_20:AL

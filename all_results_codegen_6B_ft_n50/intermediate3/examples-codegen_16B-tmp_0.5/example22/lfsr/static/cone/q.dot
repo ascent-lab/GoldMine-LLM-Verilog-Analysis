@@ -1,0 +1,22 @@
+strict digraph "" {
+	q	[complexity=0,
+		importance=0.290322430297,
+		rank=0.0];
+	r_reg	[complexity=6,
+		importance=0.741935384114,
+		rank=0.123655897352];
+	r_reg -> q;
+	feedback_value	[complexity=3,
+		importance=0.483870629341,
+		rank=0.16129020978];
+	r_reg -> feedback_value;
+	"[1]r_next"	[complexity=8,
+		importance=0.870967692057,
+		rank=0.108870961507];
+	"[1]r_next" -> r_reg;
+	"[1]reset"	[complexity=7,
+		importance=1.61290307617,
+		rank=0.230414725167];
+	"[1]reset" -> r_reg;
+	feedback_value -> q;
+}

@@ -1,0 +1,35 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"13:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7fc735af5390>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="13:AL",
+		sens="['clk']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['q', 'slowena']"];
+	"14:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7fc735af5410>",
+		fillcolor=springgreen,
+		label="14:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"13:AL" -> "14:IF"	[cond="[]",
+		lineno=None];
+	"15:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fc735a77390>",
+		fillcolor=firebrick,
+		label="15:NS
+q <= q + 1;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7fc735a77390>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"14:IF" -> "15:NS"	[cond="['slowena']",
+		label=slowena,
+		lineno=14];
+	"Leaf_13:AL"	[def_var="['q']",
+		label="Leaf_13:AL"];
+	"Leaf_13:AL" -> "13:AL";
+	"15:NS" -> "Leaf_13:AL"	[cond="[]",
+		lineno=None];
+}

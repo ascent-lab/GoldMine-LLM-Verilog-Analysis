@@ -1,0 +1,7 @@
+a	overflow_d	1.0
+a	s_d	1.0
+b	b_d	1.0
+b_d	overflow_d	1.0
+b_d	s_d	1.0
+overflow_d	overflow	1.0
+s_d	s	1.0

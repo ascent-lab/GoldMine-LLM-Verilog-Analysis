@@ -1,0 +1,17 @@
+strict digraph "" {
+	q	[complexity=2,
+		importance=1.0,
+		rank=0.5];
+	"[2]q"	[complexity=6,
+		importance=3.0,
+		rank=0.5];
+	"[1]q"	[complexity=4,
+		importance=2.0,
+		rank=0.5];
+	"[2]q" -> "[1]q";
+	"[1]q" -> q;
+	"[3]q"	[complexity=8,
+		importance=4.0,
+		rank=0.5];
+	"[3]q" -> "[2]q";
+}

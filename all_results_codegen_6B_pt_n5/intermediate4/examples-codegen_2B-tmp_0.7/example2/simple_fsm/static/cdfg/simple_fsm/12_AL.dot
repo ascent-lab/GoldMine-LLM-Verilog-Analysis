@@ -1,0 +1,36 @@
+strict digraph "" {
+	node [label="\N"];
+	"13:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f2bc0965290>",
+		fillcolor=springgreen,
+		label="13:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"13:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f2bc09650d0>",
+		fillcolor=firebrick,
+		label="13:NS
+present_state <= next_state;
+present_state <= next_state;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f2bc09650d0>, <pyverilog.vparser.ast.NonblockingSubstitution object \
+at 0x7f2bc09650d0>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"13:IF" -> "13:NS"	[cond="['reset']",
+		label="!(reset)",
+		lineno=13];
+	"Leaf_12:AL"	[def_var="['present_state']",
+		label="Leaf_12:AL"];
+	"13:NS" -> "Leaf_12:AL"	[cond="[]",
+		lineno=None];
+	"12:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f2bc0965510>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="12:AL",
+		sens="['clk']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['reset', 'next_state']"];
+	"12:AL" -> "13:IF"	[cond="[]",
+		lineno=None];
+}

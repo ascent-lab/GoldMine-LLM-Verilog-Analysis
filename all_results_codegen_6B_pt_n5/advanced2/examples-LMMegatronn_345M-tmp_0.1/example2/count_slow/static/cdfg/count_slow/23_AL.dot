@@ -1,0 +1,46 @@
+strict digraph "" {
+	node [label="\N"];
+	"24:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f743296ef50>",
+		fillcolor=springgreen,
+		label="24:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"24:BS"	[ast="<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f743296eb90>",
+		fillcolor=cadetblue,
+		label="24:BS
+q_next = 4'b0000;",
+		statements="[<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f743296eb90>]",
+		style=filled,
+		typ=BlockingSubstitution];
+	"24:IF" -> "24:BS"	[cond="['q']",
+		label="(q == 4'b0000)",
+		lineno=24];
+	"25:BS"	[ast="<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f743296efd0>",
+		fillcolor=cadetblue,
+		label="25:BS
+q_next = q_next + 1;",
+		statements="[<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f743296efd0>]",
+		style=filled,
+		typ=BlockingSubstitution];
+	"24:IF" -> "25:BS"	[cond="['q']",
+		label="!((q == 4'b0000))",
+		lineno=24];
+	"23:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f743296ee50>",
+		clk_sens=False,
+		fillcolor=gold,
+		label="23:AL",
+		sens="['q']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['q', 'q_next']"];
+	"23:AL" -> "24:IF"	[cond="[]",
+		lineno=None];
+	"Leaf_23:AL"	[def_var="['q_next']",
+		label="Leaf_23:AL"];
+	"24:BS" -> "Leaf_23:AL"	[cond="[]",
+		lineno=None];
+	"25:BS" -> "Leaf_23:AL"	[cond="[]",
+		lineno=None];
+}

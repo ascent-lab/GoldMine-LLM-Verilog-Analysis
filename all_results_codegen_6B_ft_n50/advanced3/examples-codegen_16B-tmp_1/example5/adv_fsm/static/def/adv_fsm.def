@@ -1,0 +1,6 @@
+{'z': {'CDeps': [],
+       'CLines': [],
+       'Clocked': False,
+       'DDeps': [['present_state']],
+       'DLines': ['17:D'],
+       'Expressions': [<pyverilog.vparser.ast.Assign object at 0x7fa2ce34ee90>]}}

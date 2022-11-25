@@ -1,0 +1,4 @@
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/lfsr/lfsr_bench.v:13: warning: output port q is coerced to inout.
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/lfsr/lfsr_bench.v:19: error: Could not find variable ``rst'' in ``lfsr_bench''
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/lfsr/lfsr_bench.v:21: error: Could not find variable ``rst'' in ``lfsr_bench''
+2 error(s) during elaboration.

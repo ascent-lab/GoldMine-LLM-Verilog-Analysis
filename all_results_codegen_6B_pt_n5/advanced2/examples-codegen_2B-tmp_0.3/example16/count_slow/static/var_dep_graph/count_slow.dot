@@ -1,0 +1,4 @@
+digraph "" {
+	q -> q	[weight=4.0];
+	slowena -> q	[weight=4.0];
+}

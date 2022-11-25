@@ -1,0 +1,7 @@
+{'clk': {'DefVars': [None], 'Lines': ['18:C'], 'Sensitivities': [['clk']]},
+ 'incr': {'DefVars': ['incr'],
+          'Lines': ['18:D'],
+          'Sensitivities': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f0900b71550>]},
+ 'reset': {'DefVars': [None, None],
+           'Lines': ['14:C', '14:C'],
+           'Sensitivities': [['reset'], ['reset']]}}

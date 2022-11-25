@@ -1,0 +1,78 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"23:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f4cc71bd6d0>",
+		def_var="['feedback_value']",
+		fillcolor=deepskyblue,
+		label="23:AS
+feedback_value = r_reg[4] ^ r_reg[2];",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg', 'r_reg']"];
+	"24:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f4cc71a6150>",
+		def_var="['r_next']",
+		fillcolor=deepskyblue,
+		label="24:AS
+r_next = { r_reg[3:0], feedback_value };",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg', 'feedback_value']"];
+	"23:AS" -> "24:AS";
+	"Leaf_18:AL"	[def_var="['r_reg']",
+		label="Leaf_18:AL"];
+	"Leaf_18:AL" -> "23:AS";
+	"Leaf_18:AL" -> "24:AS";
+	"25:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f4cc71a6f50>",
+		def_var="['q']",
+		fillcolor=deepskyblue,
+		label="25:AS
+q = r_reg;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['r_reg']"];
+	"Leaf_18:AL" -> "25:AS";
+	"18:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f4cc71a3790>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="18:AL",
+		sens="['clk', 'reset']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['reset', 'r_next']"];
+	"24:AS" -> "18:AL";
+	"19:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f4cc71a3610>",
+		fillcolor=springgreen,
+		label="19:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"22:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f4cc714ecd0>",
+		fillcolor=firebrick,
+		label="22:NS
+r_reg <= r_next;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f4cc714ecd0>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"19:IF" -> "22:NS"	[cond="['reset']",
+		label="!(reset)",
+		lineno=19];
+	"20:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f4cc71a3210>",
+		fillcolor=firebrick,
+		label="20:NS
+r_reg <= 1'b0;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f4cc71a3210>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"19:IF" -> "20:NS"	[cond="['reset']",
+		label=reset,
+		lineno=19];
+	"22:NS" -> "Leaf_18:AL"	[cond="[]",
+		lineno=None];
+	"20:NS" -> "Leaf_18:AL"	[cond="[]",
+		lineno=None];
+	"18:AL" -> "19:IF"	[cond="[]",
+		lineno=None];
+}

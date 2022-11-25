@@ -1,0 +1,14 @@
+strict digraph "" {
+	node [label="\N"];
+	"15:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7fcce933cb10>",
+		def_var="['r_next']",
+		fillcolor=deepskyblue,
+		label="15:AS
+r_next = (reset == 1'b0)? 5'b1 : 
+(feedback_value == 1'b0)? r_reg : r_reg & { q[4], q[4] ^ q[3], q[4] ^ q[0] } ^ { q[2], q[\
+2] ^ q[1], q[2] ^ q[0] };",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['reset', 'feedback_value', 'r_reg', 'r_reg', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q', 'q']"];
+}

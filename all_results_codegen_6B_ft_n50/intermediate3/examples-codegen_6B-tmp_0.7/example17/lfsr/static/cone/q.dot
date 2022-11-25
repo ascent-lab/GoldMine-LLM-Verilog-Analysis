@@ -1,0 +1,80 @@
+strict digraph "" {
+	"[2]reset"	[complexity=18,
+		importance=3.18780422132,
+		rank=0.177100234518];
+	"[1]r_reg"	[complexity=17,
+		importance=1.54390211066,
+		rank=0.0908177712154];
+	"[2]reset" -> "[1]r_reg";
+	"[1]q"	[complexity=11,
+		importance=1.11951216082,
+		rank=0.101773832801];
+	"[1]r_next"	[complexity=8,
+		importance=0.9,
+		rank=0.1125];
+	"[1]q" -> "[1]r_next";
+	"[1]feedback_value"	[complexity=14,
+		importance=1.2658538023,
+		rank=0.0904181287355];
+	"[1]feedback_value" -> "[1]q";
+	"[3]q"	[complexity=33,
+		importance=2.91951216082,
+		rank=0.0884700654793];
+	"[3]r_next"	[complexity=30,
+		importance=2.7,
+		rank=0.09];
+	"[3]q" -> "[3]r_next";
+	"[1]r_reg" -> "[1]q";
+	"[1]r_reg" -> "[1]feedback_value";
+	"[1]r_reg" -> "[1]r_next";
+	"[3]feedback_value"	[complexity=36,
+		importance=3.0658538023,
+		rank=0.0851626056194];
+	"[3]feedback_value" -> "[3]q";
+	"[2]q"	[complexity=22,
+		importance=2.01951216082,
+		rank=0.0917960073098];
+	"[2]r_next"	[complexity=19,
+		importance=1.8,
+		rank=0.0947368421053];
+	"[2]q" -> "[2]r_next";
+	"[2]r_reg"	[complexity=28,
+		importance=2.44390211066,
+		rank=0.0872822182379];
+	"[3]r_next" -> "[2]r_reg";
+	feedback_value	[complexity=3,
+		importance=0.365853802298,
+		rank=0.121951267433];
+	q	[complexity=0,
+		importance=0.219512160815,
+		rank=0.0];
+	feedback_value -> q;
+	"[2]feedback_value"	[complexity=25,
+		importance=2.1658538023,
+		rank=0.0866341520919];
+	"[2]feedback_value" -> "[2]q";
+	"[3]r_reg"	[complexity=39,
+		importance=3.34390211066,
+		rank=0.0857410797605];
+	"[3]r_reg" -> "[3]q";
+	"[3]r_reg" -> "[3]feedback_value";
+	"[3]r_reg" -> "[3]r_next";
+	r_reg	[complexity=6,
+		importance=0.643902110661,
+		rank=0.107317018444];
+	"[1]r_next" -> r_reg;
+	"[2]r_next" -> "[1]r_reg";
+	"[2]r_reg" -> "[2]q";
+	"[2]r_reg" -> "[2]feedback_value";
+	"[2]r_reg" -> "[2]r_next";
+	r_reg -> feedback_value;
+	r_reg -> q;
+	"[1]reset"	[complexity=7,
+		importance=1.38780422132,
+		rank=0.198257745903];
+	"[1]reset" -> r_reg;
+	"[3]reset"	[complexity=29,
+		importance=4.98780422132,
+		rank=0.171993249011];
+	"[3]reset" -> "[2]r_reg";
+}

@@ -1,0 +1,12 @@
+{'next_state': {'DefVars': ['present_state'],
+                'Lines': ['23:D'],
+                'Sensitivities': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f3be6131650>]},
+ 'present_state': {'DefVars': ['z'],
+                   'Lines': ['40:D'],
+                   'Sensitivities': [<pyverilog.vparser.ast.Assign object at 0x7f3be5d98a10>]},
+ 'reset': {'DefVars': [None, None],
+           'Lines': ['20:C', '20:C'],
+           'Sensitivities': [['reset'], ['reset']]},
+ 'x': {'DefVars': [None, None, None, None, None],
+       'Lines': ['28:C', '34:C', '28:C', '34:C', '28:C'],
+       'Sensitivities': [['x'], ['x'], ['x'], ['x'], ['x']]}}

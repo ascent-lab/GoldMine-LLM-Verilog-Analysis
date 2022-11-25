@@ -1,0 +1,5 @@
+reset	out	10.0
+load	out	9.0
+amount	out	8.0
+data	out	1.0
+out	out	8.0

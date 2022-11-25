@@ -1,0 +1,13 @@
+{'feedback_value': {'DefVars': ['r_next'],
+                    'Lines': ['16:D'],
+                    'Sensitivities': [<pyverilog.vparser.ast.Assign object at 0x7f5183f234d0>]},
+ 'r_next': {'DefVars': ['q'],
+            'Lines': ['17:D'],
+            'Sensitivities': [<pyverilog.vparser.ast.Assign object at 0x7f5183ecebd0>]},
+ 'r_reg': {'DefVars': ['r_next', 'q'],
+           'Lines': ['16:D', '17:D'],
+           'Sensitivities': [<pyverilog.vparser.ast.Assign object at 0x7f5183f234d0>,
+                             <pyverilog.vparser.ast.Assign object at 0x7f5183ecebd0>]},
+ 'reset': {'DefVars': ['q'],
+           'Lines': ['17:D'],
+           'Sensitivities': [<pyverilog.vparser.ast.Assign object at 0x7f5183ecebd0>]}}

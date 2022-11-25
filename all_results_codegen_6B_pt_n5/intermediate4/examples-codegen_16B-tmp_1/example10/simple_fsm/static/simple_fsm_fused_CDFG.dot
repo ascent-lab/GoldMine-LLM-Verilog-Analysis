@@ -1,0 +1,95 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"17:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f8e59fb1550>",
+		fillcolor=springgreen,
+		label="17:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"18:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f8e59fb1150>",
+		fillcolor=firebrick,
+		label="18:NS
+present_state <= #1 0;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f8e59fb1150>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"17:IF" -> "18:NS"	[cond="['reset']",
+		label=reset,
+		lineno=17];
+	"19:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f8e59fa6450>",
+		fillcolor=springgreen,
+		label="19:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"17:IF" -> "19:IF"	[cond="['reset']",
+		label="!(reset)",
+		lineno=17];
+	"24:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f8e59e58310>",
+		def_var="['out']",
+		fillcolor=deepskyblue,
+		label="24:AS
+out = in && (present_state == 0) || (present_state == 1) && !in;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['in', 'present_state', 'present_state', 'in']"];
+	"Leaf_16:AL"	[def_var="['present_state']",
+		label="Leaf_16:AL"];
+	"18:NS" -> "Leaf_16:AL"	[cond="[]",
+		lineno=None];
+	"21:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f8e5a26a250>",
+		fillcolor=springgreen,
+		label="21:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"19:IF" -> "21:IF"	[cond="['in', 'present_state']",
+		label="!((in && (present_state == 0)))",
+		lineno=19];
+	"20:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f8e59fa6150>",
+		fillcolor=firebrick,
+		label="20:NS
+present_state <= #1 0;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f8e59fa6150>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"19:IF" -> "20:NS"	[cond="['in', 'present_state']",
+		label="(in && (present_state == 0))",
+		lineno=19];
+	"22:NS"	[ast="<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f8e5a26a090>",
+		fillcolor=firebrick,
+		label="22:NS
+present_state <= #1 1;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f8e5a26a090>]",
+		style=filled,
+		typ=NonblockingSubstitution];
+	"21:IF" -> "22:NS"	[cond="['in', 'present_state']",
+		label="(!in && (present_state == 1))",
+		lineno=21];
+	"22:NS" -> "Leaf_16:AL"	[cond="[]",
+		lineno=None];
+	"16:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f8e59fa3610>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="16:AL",
+		sens="['clk']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['reset', 'present_state', 'in']"];
+	"16:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f8e59fa3890>",
+		fillcolor=turquoise,
+		label="16:BL",
+		statements="[]",
+		style=filled,
+		typ=Block];
+	"16:AL" -> "16:BL"	[cond="[]",
+		lineno=None];
+	"20:NS" -> "Leaf_16:AL"	[cond="[]",
+		lineno=None];
+	"Leaf_16:AL" -> "24:AS";
+	"Leaf_16:AL" -> "16:AL";
+	"16:BL" -> "17:IF"	[cond="[]",
+		lineno=None];
+}

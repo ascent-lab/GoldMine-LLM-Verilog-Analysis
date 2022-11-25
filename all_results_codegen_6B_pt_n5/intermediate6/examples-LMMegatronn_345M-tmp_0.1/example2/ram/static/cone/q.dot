@@ -1,0 +1,13 @@
+strict digraph "" {
+	q	[complexity=0,
+		importance=0.499999686387,
+		rank=0.0];
+	ram	[complexity=3,
+		importance=0.749999843194,
+		rank=0.249999947731];
+	ram -> q;
+	addr	[complexity=3,
+		importance=0.749999843194,
+		rank=0.249999947731];
+	addr -> q;
+}

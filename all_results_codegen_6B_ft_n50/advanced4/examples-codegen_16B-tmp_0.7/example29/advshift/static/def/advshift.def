@@ -1,0 +1,12 @@
+{'q': {'CDeps': [[[], [], ['load'], ['ena']]],
+       'CLines': [[None, None, '19:C', '21:C']],
+       'Clocked': True,
+       'DDeps': [['q_temp']],
+       'DLines': ['22:D'],
+       'Expressions': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f6589771250>]},
+ 'q_temp': {'CDeps': [[[], [], ['load']]],
+            'CLines': [[None, None, '19:C']],
+            'Clocked': True,
+            'DDeps': [['data']],
+            'DLines': ['20:D'],
+            'Expressions': [<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f658970e290>]}}

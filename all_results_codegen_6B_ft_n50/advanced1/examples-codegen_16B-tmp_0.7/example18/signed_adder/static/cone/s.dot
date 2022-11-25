@@ -1,0 +1,17 @@
+strict digraph "" {
+	a	[complexity=4,
+		importance=0.333333284236,
+		rank=0.0833333210589];
+	s	[complexity=0,
+		importance=0.212121174675,
+		rank=0.0];
+	a -> s;
+	b	[complexity=4,
+		importance=0.333333284236,
+		rank=0.0833333210589];
+	b -> s;
+	cin	[complexity=4,
+		importance=0.333333284236,
+		rank=0.0833333210589];
+	cin -> s;
+}

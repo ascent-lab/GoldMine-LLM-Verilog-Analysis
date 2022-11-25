@@ -1,0 +1,5 @@
+we	ram
+ram	q
+data	ram
+addr	q
+addr	ram

@@ -1,0 +1,75 @@
+strict digraph "" {
+	node [label="\N"];
+	"17:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f3cecaf0510>",
+		fillcolor=springgreen,
+		label="17:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"21:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f3cecaf0650>",
+		fillcolor=turquoise,
+		label="21:BL
+q <= q + 4'b0001;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f3cecaf0690>]",
+		style=filled,
+		typ=Block];
+	"17:IF" -> "21:BL"	[cond="['q']",
+		label="!((q == 4'd12))",
+		lineno=17];
+	"17:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f3cecaf08d0>",
+		fillcolor=turquoise,
+		label="17:BL
+q <= 4'b0001;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f3cecaf0910>]",
+		style=filled,
+		typ=Block];
+	"17:IF" -> "17:BL"	[cond="['q']",
+		label="(q == 4'd12)",
+		lineno=17];
+	"Leaf_11:AL"	[def_var="['q']",
+		label="Leaf_11:AL"];
+	"21:BL" -> "Leaf_11:AL"	[cond="[]",
+		lineno=None];
+	"13:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f3cecaf0cd0>",
+		fillcolor=springgreen,
+		label="13:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"13:IF" -> "17:IF"	[cond="['reset']",
+		label="!((reset == 1'b1))",
+		lineno=13];
+	"13:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f3cecaf0d10>",
+		fillcolor=turquoise,
+		label="13:BL
+q <= 4'b0001;",
+		statements="[<pyverilog.vparser.ast.NonblockingSubstitution object at 0x7f3cecaf0d50>]",
+		style=filled,
+		typ=Block];
+	"13:IF" -> "13:BL"	[cond="['reset']",
+		label="(reset == 1'b1)",
+		lineno=13];
+	"17:BL" -> "Leaf_11:AL"	[cond="[]",
+		lineno=None];
+	"11:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f3cecaf0c90>",
+		fillcolor=turquoise,
+		label="11:BL",
+		statements="[]",
+		style=filled,
+		typ=Block];
+	"11:BL" -> "13:IF"	[cond="[]",
+		lineno=None];
+	"13:BL" -> "Leaf_11:AL"	[cond="[]",
+		lineno=None];
+	"11:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f3cecaf0b10>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="11:AL",
+		sens="['clk', 'reset']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['reset', 'q']"];
+	"11:AL" -> "11:BL"	[cond="[]",
+		lineno=None];
+}

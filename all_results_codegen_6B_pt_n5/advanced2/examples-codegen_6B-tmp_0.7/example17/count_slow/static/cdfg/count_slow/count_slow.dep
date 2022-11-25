@@ -1,0 +1,8 @@
+15:AL	16:NS
+16:NS	Leaf_15:AL
+Leaf_15:AL	15:AL
+Leaf_15:AL	24:AL
+Leaf_24:AL	15:AL
+Leaf_24:AL	24:AL
+25:NS	Leaf_24:AL
+24:AL	25:NS

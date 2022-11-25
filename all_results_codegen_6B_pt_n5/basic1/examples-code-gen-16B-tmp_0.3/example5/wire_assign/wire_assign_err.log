@@ -1,0 +1,5 @@
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/wire_assign/wire_assign_bench.v:16: error: Could not find variable ``clk'' in ``wire_assign_bench''
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/wire_assign/wire_assign_bench.v:17: error: Could not find variable ``rst'' in ``wire_assign_bench''
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/wire_assign/wire_assign_bench.v:19: error: Could not find variable ``rst'' in ``wire_assign_bench''
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/wire_assign/wire_assign_bench.v:24: error: Could not find variable ``clk'' in ``wire_assign_bench''
+4 error(s) during elaboration.

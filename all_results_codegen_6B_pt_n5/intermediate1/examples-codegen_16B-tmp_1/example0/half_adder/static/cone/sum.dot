@@ -1,0 +1,27 @@
+strict digraph "" {
+	a	[complexity=4,
+		importance=0.224999671285,
+		rank=0.0562499178214];
+	sum	[complexity=0,
+		importance=0.158333050047,
+		rank=0.0];
+	a -> sum;
+	b	[complexity=7,
+		importance=0.324999242067,
+		rank=0.0464284631524];
+	y	[complexity=4,
+		importance=0.258332620828,
+		rank=0.0645831552069];
+	b -> y;
+	x	[complexity=4,
+		importance=0.258332620828,
+		rank=0.0645831552069];
+	b -> x;
+	b_not	[complexity=7,
+		importance=0.324999242067,
+		rank=0.0464284631524];
+	b_not -> y;
+	b_not -> x;
+	y -> sum;
+	x -> sum;
+}

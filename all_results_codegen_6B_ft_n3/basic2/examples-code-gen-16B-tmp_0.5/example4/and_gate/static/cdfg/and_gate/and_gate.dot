@@ -1,0 +1,12 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"9:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f74527c37d0>",
+		def_var="['out']",
+		fillcolor=deepskyblue,
+		label="9:AS
+out = a & b;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'b']"];
+}

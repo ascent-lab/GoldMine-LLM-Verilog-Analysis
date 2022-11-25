@@ -1,0 +1,5 @@
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/priority_encoder/priority_encoder_bench.v:16: error: Could not find variable ``clk'' in ``priority_encoder_bench''
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/priority_encoder/priority_encoder_bench.v:17: error: Could not find variable ``rst'' in ``priority_encoder_bench''
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/priority_encoder/priority_encoder_bench.v:19: error: Could not find variable ``rst'' in ``priority_encoder_bench''
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/priority_encoder/priority_encoder_bench.v:24: error: Could not find variable ``clk'' in ``priority_encoder_bench''
+4 error(s) during elaboration.

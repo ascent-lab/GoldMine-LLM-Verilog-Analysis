@@ -1,0 +1,8 @@
+{'a': {'DefVars': ['sum', 'cout'],
+       'Lines': ['8:D', '9:D'],
+       'Sensitivities': [<pyverilog.vparser.ast.BlockingSubstitution object at 0x7faf9cc77390>,
+                         <pyverilog.vparser.ast.BlockingSubstitution object at 0x7faf9cc63790>]},
+ 'b': {'DefVars': ['sum', 'cout'],
+       'Lines': ['8:D', '9:D'],
+       'Sensitivities': [<pyverilog.vparser.ast.BlockingSubstitution object at 0x7faf9cc77390>,
+                         <pyverilog.vparser.ast.BlockingSubstitution object at 0x7faf9cc63790>]}}

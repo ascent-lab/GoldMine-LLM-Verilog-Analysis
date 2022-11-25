@@ -1,0 +1,8 @@
+a	sum_overflow	1.0
+a	sum_signed	1.0
+sum_overflow	overflow	1.0
+b	b_signed	1.0
+b_signed	sum_overflow	1.0
+b_signed	sum_signed	1.0
+sum_signed	sum_overflow	1.0
+sum_signed	s	1.0

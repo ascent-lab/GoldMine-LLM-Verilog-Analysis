@@ -1,0 +1,6 @@
+Variable | Rank 
+-------- | -----
+  out    | 0.625
+ reset   | 0.125
+  load   | 0.125
+  data   | 0.125

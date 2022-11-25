@@ -1,0 +1,21 @@
+strict digraph "compose( ,  )" {
+	node [label="\N"];
+	"7:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f522d9371d0>",
+		def_var="['cout']",
+		fillcolor=deepskyblue,
+		label="7:AS
+cout = a & b;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'b']"];
+	"6:AS"	[ast="<pyverilog.vparser.ast.Assign object at 0x7f522d9b5f10>",
+		def_var="['sum']",
+		fillcolor=deepskyblue,
+		label="6:AS
+sum = a ^ b;",
+		statements="[]",
+		style=filled,
+		typ=Assign,
+		use_var="['a', 'b']"];
+}

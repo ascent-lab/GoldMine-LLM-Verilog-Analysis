@@ -1,0 +1,96 @@
+strict digraph "" {
+	node [label="\N"];
+	"16:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f0baa93afd0>",
+		fillcolor=springgreen,
+		label="16:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"21:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f0baa93a910>",
+		fillcolor=turquoise,
+		label="21:BL
+pos = 2'd0;",
+		statements="[<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f0baa93a690>]",
+		style=filled,
+		typ=Block];
+	"16:IF" -> "21:BL"	[cond="['in']",
+		label="!((in[0] == 1'b1))",
+		lineno=16];
+	"17:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f0baa93aa10>",
+		fillcolor=turquoise,
+		label="17:BL
+pos = 2'd0;",
+		statements="[<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f0baa93af10>]",
+		style=filled,
+		typ=Block];
+	"16:IF" -> "17:BL"	[cond="['in']",
+		label="(in[0] == 1'b1)",
+		lineno=16];
+	"8:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f0bac098050>",
+		fillcolor=springgreen,
+		label="8:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"12:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f0bac0bab90>",
+		fillcolor=springgreen,
+		label="12:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"8:IF" -> "12:IF"	[cond="['in']",
+		label="!((in[2] == 1'b1))",
+		lineno=8];
+	"9:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f0bac098090>",
+		fillcolor=turquoise,
+		label="9:BL
+pos = 2'd3;",
+		statements="[<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f0bac0980d0>]",
+		style=filled,
+		typ=Block];
+	"8:IF" -> "9:BL"	[cond="['in']",
+		label="(in[2] == 1'b1)",
+		lineno=8];
+	"Leaf_6:AL"	[def_var="['pos']",
+		label="Leaf_6:AL"];
+	"21:BL" -> "Leaf_6:AL"	[cond="[]",
+		lineno=None];
+	"12:IF" -> "16:IF"	[cond="['in']",
+		label="!((in[1] == 1'b1))",
+		lineno=12];
+	"13:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f0bac0babd0>",
+		fillcolor=turquoise,
+		label="13:BL
+pos = 2'd1;",
+		statements="[<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f0bac0bac10>]",
+		style=filled,
+		typ=Block];
+	"12:IF" -> "13:BL"	[cond="['in']",
+		label="(in[1] == 1'b1)",
+		lineno=12];
+	"17:BL" -> "Leaf_6:AL"	[cond="[]",
+		lineno=None];
+	"13:BL" -> "Leaf_6:AL"	[cond="[]",
+		lineno=None];
+	"6:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f0bac0baed0>",
+		clk_sens=False,
+		fillcolor=gold,
+		label="6:AL",
+		sens="[]",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['in']"];
+	"7:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f0bac0bafd0>",
+		fillcolor=turquoise,
+		label="7:BL",
+		statements="[]",
+		style=filled,
+		typ=Block];
+	"6:AL" -> "7:BL"	[cond="[]",
+		lineno=None];
+	"9:BL" -> "Leaf_6:AL"	[cond="[]",
+		lineno=None];
+	"7:BL" -> "8:IF"	[cond="[]",
+		lineno=None];
+}

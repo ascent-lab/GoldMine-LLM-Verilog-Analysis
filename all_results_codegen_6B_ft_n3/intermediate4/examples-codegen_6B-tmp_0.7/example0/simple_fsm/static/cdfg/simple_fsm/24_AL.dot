@@ -1,0 +1,75 @@
+strict digraph "" {
+	node [label="\N"];
+	"35:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f03b06ef6d0>",
+		fillcolor=turquoise,
+		label="35:BL
+next_state = present_state;",
+		statements="[<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f03b06ef510>]",
+		style=filled,
+		typ=Block];
+	"Leaf_24:AL"	[def_var="['next_state']",
+		label="Leaf_24:AL"];
+	"35:BL" -> "Leaf_24:AL"	[cond="[]",
+		lineno=None];
+	"31:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f03b06ef850>",
+		fillcolor=turquoise,
+		label="31:BL
+next_state = 0;",
+		statements="[<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f03b06ef710>]",
+		style=filled,
+		typ=Block];
+	"31:BL" -> "Leaf_24:AL"	[cond="[]",
+		lineno=None];
+	"24:AL"	[ast="<pyverilog.vparser.ast.Always object at 0x7f03b06ef8d0>",
+		clk_sens=True,
+		fillcolor=gold,
+		label="24:AL",
+		sens="['clk']",
+		statements="[]",
+		style=filled,
+		typ=Always,
+		use_var="['present_state', 'in']"];
+	"25:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f03b06efa10>",
+		fillcolor=turquoise,
+		label="25:BL",
+		statements="[]",
+		style=filled,
+		typ=Block];
+	"24:AL" -> "25:BL"	[cond="[]",
+		lineno=None];
+	"27:BL"	[ast="<pyverilog.vparser.ast.Block object at 0x7f03b06efd10>",
+		fillcolor=turquoise,
+		label="27:BL
+next_state = 1;",
+		statements="[<pyverilog.vparser.ast.BlockingSubstitution object at 0x7f03b06efd50>]",
+		style=filled,
+		typ=Block];
+	"27:BL" -> "Leaf_24:AL"	[cond="[]",
+		lineno=None];
+	"26:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f03b06efa50>",
+		fillcolor=springgreen,
+		label="26:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"26:IF" -> "27:BL"	[cond="['present_state', 'in']",
+		label="((present_state == 1) && (in == 0))",
+		lineno=26];
+	"30:IF"	[ast="<pyverilog.vparser.ast.IfStatement object at 0x7f03b06efad0>",
+		fillcolor=springgreen,
+		label="30:IF",
+		statements="[]",
+		style=filled,
+		typ=IfStatement];
+	"26:IF" -> "30:IF"	[cond="['present_state', 'in']",
+		label="!(((present_state == 1) && (in == 0)))",
+		lineno=26];
+	"25:BL" -> "26:IF"	[cond="[]",
+		lineno=None];
+	"30:IF" -> "35:BL"	[cond="['present_state', 'in']",
+		label="!(((present_state == 0) && (in == 1)))",
+		lineno=30];
+	"30:IF" -> "31:BL"	[cond="['present_state', 'in']",
+		label="((present_state == 0) && (in == 1))",
+		lineno=30];
+}

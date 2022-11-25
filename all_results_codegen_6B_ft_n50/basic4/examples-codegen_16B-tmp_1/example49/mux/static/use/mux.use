@@ -1,0 +1,13 @@
+{'a': {'DefVars': ['out'],
+       'Lines': ['10:D'],
+       'Sensitivities': [<pyverilog.vparser.ast.Assign object at 0x7f9060fa3790>]},
+ 'b': {'DefVars': ['out'],
+       'Lines': ['10:D'],
+       'Sensitivities': [<pyverilog.vparser.ast.Assign object at 0x7f9060fa3790>]},
+ 'sel': {'DefVars': ['selbar', 'out'],
+         'Lines': ['9:D', '10:D'],
+         'Sensitivities': [<pyverilog.vparser.ast.Assign object at 0x7f90612750d0>,
+                           <pyverilog.vparser.ast.Assign object at 0x7f9060fa3790>]},
+ 'selbar': {'DefVars': ['out'],
+            'Lines': ['10:D'],
+            'Sensitivities': [<pyverilog.vparser.ast.Assign object at 0x7f9060fa3790>]}}

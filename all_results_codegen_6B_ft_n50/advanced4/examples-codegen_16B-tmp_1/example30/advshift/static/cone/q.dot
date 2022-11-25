@@ -1,0 +1,17 @@
+strict digraph "" {
+	q	[complexity=0,
+		importance=0.454545232098,
+		rank=0.0];
+	ena	[complexity=2,
+		importance=1.99999918436,
+		rank=0.99999959218];
+	ena -> q;
+	amount	[complexity=1,
+		importance=1.99999918436,
+		rank=1.99999918436];
+	amount -> q;
+	data	[complexity=4,
+		importance=1.09090872016,
+		rank=0.272727180041];
+	data -> q;
+}

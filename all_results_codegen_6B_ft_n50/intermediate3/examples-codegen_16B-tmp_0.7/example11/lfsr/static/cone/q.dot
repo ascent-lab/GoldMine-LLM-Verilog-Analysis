@@ -1,0 +1,78 @@
+strict digraph "" {
+	"[2]reset"	[complexity=50,
+		importance=1.72098757478,
+		rank=0.0344197514957];
+	"[2]r_next"	[complexity=35,
+		importance=1.62098757478,
+		rank=0.0463139307081];
+	"[2]reset" -> "[2]r_next";
+	"[1]q"	[complexity=31,
+		importance=1.0432100733,
+		rank=0.0336519378483];
+	"[1]feedback_value"	[complexity=19,
+		importance=0.9,
+		rank=0.0473684210526];
+	"[1]q" -> "[1]feedback_value";
+	"[1]r_next"	[complexity=4,
+		importance=0.720987574783,
+		rank=0.180246893696];
+	"[1]q" -> "[1]r_next";
+	"[1]feedback_value" -> "[1]r_next";
+	"[3]q"	[complexity=93,
+		importance=2.8432100733,
+		rank=0.0305721513258];
+	"[3]feedback_value"	[complexity=81,
+		importance=2.7,
+		rank=0.0333333333333];
+	"[3]q" -> "[3]feedback_value";
+	"[3]r_next"	[complexity=66,
+		importance=2.52098757478,
+		rank=0.0381967814361];
+	"[3]q" -> "[3]r_next";
+	"[1]r_reg"	[complexity=33,
+		importance=1.30246927395,
+		rank=0.0394687658772];
+	"[1]r_reg" -> "[1]q";
+	"[1]r_reg" -> "[1]feedback_value";
+	"[1]r_reg" -> "[1]r_next";
+	"[3]feedback_value" -> "[3]r_next";
+	"[2]r_reg"	[complexity=64,
+		importance=2.20246927395,
+		rank=0.0344135824054];
+	"[2]feedback_value"	[complexity=50,
+		importance=1.8,
+		rank=0.036];
+	"[2]r_reg" -> "[2]feedback_value";
+	"[2]r_reg" -> "[2]r_next";
+	"[2]q"	[complexity=62,
+		importance=1.9432100733,
+		rank=0.0313420979564];
+	"[2]r_reg" -> "[2]q";
+	"[3]r_next" -> "[2]r_reg";
+	"[2]feedback_value" -> "[2]r_next";
+	"[3]r_reg"	[complexity=95,
+		importance=3.10246927395,
+		rank=0.0326575713047];
+	"[3]r_reg" -> "[3]q";
+	"[3]r_reg" -> "[3]feedback_value";
+	"[3]r_reg" -> "[3]r_next";
+	q	[complexity=0,
+		importance=0.143210073296,
+		rank=0.0];
+	r_reg	[complexity=2,
+		importance=0.402469273948,
+		rank=0.201234636974];
+	"[1]r_next" -> r_reg;
+	"[2]r_next" -> "[1]r_reg";
+	"[2]q" -> "[2]feedback_value";
+	"[2]q" -> "[2]r_next";
+	r_reg -> q;
+	"[1]reset"	[complexity=19,
+		importance=0.820987574783,
+		rank=0.043209872357];
+	"[1]reset" -> "[1]r_next";
+	"[3]reset"	[complexity=81,
+		importance=2.62098757478,
+		rank=0.0323578712936];
+	"[3]reset" -> "[3]r_next";
+}

@@ -1,0 +1,3 @@
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/abro/abro_bench.v:23: error: Could not find variable ``rst'' in ``abro_bench''
+/home/debjitjdv/Work/GoldMine/RunTime/goldmine.out/abro/abro_bench.v:25: error: Could not find variable ``rst'' in ``abro_bench''
+2 error(s) during elaboration.

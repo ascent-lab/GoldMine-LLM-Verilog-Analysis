@@ -1,0 +1,4 @@
+a	s_signed
+b	b_signed
+s_signed	s
+b_signed	s_signed

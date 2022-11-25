@@ -1,0 +1,6 @@
+reset	present_state	2.0
+IDLE	next_state	3.0
+present_state	z	1.0
+present_state	next_state	4.0
+x	next_state	3.0
+next_state	present_state	1.0

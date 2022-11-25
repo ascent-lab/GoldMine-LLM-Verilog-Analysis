@@ -1,0 +1,27 @@
+strict digraph "" {
+	a	[complexity=15,
+		importance=0.616279034309,
+		rank=0.041085268954];
+	tempB	[complexity=12,
+		importance=0.523255684806,
+		rank=0.0436046404005];
+	a -> tempB;
+	tempA	[complexity=12,
+		importance=0.523255684806,
+		rank=0.0436046404005];
+	a -> tempA;
+	tempS	[complexity=9,
+		importance=0.383720590395,
+		rank=0.042635621155];
+	tempB -> tempS;
+	tempA -> tempS;
+	b	[complexity=15,
+		importance=0.616279034309,
+		rank=0.041085268954];
+	b -> tempB;
+	b -> tempA;
+	overflow	[complexity=0,
+		importance=0.151162521776,
+		rank=0.0];
+	tempS -> overflow;
+}
